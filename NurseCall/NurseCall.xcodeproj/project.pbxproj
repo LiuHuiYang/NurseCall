@@ -33,6 +33,8 @@
 		04A4F13C223B59A9004E740D /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A4F13B223B59A9004E740D /* Colors.swift */; };
 		04A4F144223B841E004E740D /* UIButton+init.m in Sources */ = {isa = PBXBuildFile; fileRef = 04A4F140223B841E004E740D /* UIButton+init.m */; };
 		04A4F145223B841E004E740D /* UIBarButtonItem+init.m in Sources */ = {isa = PBXBuildFile; fileRef = 04A4F143223B841E004E740D /* UIBarButtonItem+init.m */; };
+		04A4F14A223B862C004E740D /* SHLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A4F148223B862C004E740D /* SHLoginViewController.swift */; };
+		04A4F14B223B862C004E740D /* SHLoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04A4F149223B862C004E740D /* SHLoginViewController.xib */; };
 		04BFCA2B223B36F90039461D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04BFCA2A223B36F90039461D /* AppDelegate.swift */; };
 		04BFCA32223B36FA0039461D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 04BFCA31223B36FA0039461D /* Assets.xcassets */; };
 		04BFCA35223B36FA0039461D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04BFCA33223B36FA0039461D /* LaunchScreen.storyboard */; };
@@ -91,6 +93,8 @@
 		04A4F141223B841E004E740D /* UIBarButtonItem+init.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIBarButtonItem+init.h"; sourceTree = "<group>"; };
 		04A4F142223B841E004E740D /* UIButton+init.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+init.h"; sourceTree = "<group>"; };
 		04A4F143223B841E004E740D /* UIBarButtonItem+init.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIBarButtonItem+init.m"; sourceTree = "<group>"; };
+		04A4F148223B862C004E740D /* SHLoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SHLoginViewController.swift; sourceTree = "<group>"; };
+		04A4F149223B862C004E740D /* SHLoginViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SHLoginViewController.xib; sourceTree = "<group>"; };
 		04BFCA27223B36F90039461D /* NurseCall.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NurseCall.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		04BFCA2A223B36F90039461D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		04BFCA31223B36FA0039461D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -178,6 +182,7 @@
 		04A4F0EC223B3E2D004E740D /* Main */ = {
 			isa = PBXGroup;
 			children = (
+				04A4F146223B859B004E740D /* Login */,
 				04A4F12C223B4747004E740D /* Main */,
 				04A4F126223B4747004E740D /* NurseStation */,
 				04A4F124223B4747004E740D /* Setting */,
@@ -321,6 +326,23 @@
 				04A4F140223B841E004E740D /* UIButton+init.m */,
 			);
 			path = UIBarButtonItem;
+			sourceTree = "<group>";
+		};
+		04A4F146223B859B004E740D /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				04A4F147223B859B004E740D /* Controller */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		04A4F147223B859B004E740D /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				04A4F148223B862C004E740D /* SHLoginViewController.swift */,
+				04A4F149223B862C004E740D /* SHLoginViewController.xib */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 		04BFCA1E223B36F90039461D = {
@@ -501,6 +523,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				04A4F105223B3EA0004E740D /* SQL.sql in Resources */,
+				04A4F14B223B862C004E740D /* SHLoginViewController.xib in Resources */,
 				04BFCA35223B36FA0039461D /* LaunchScreen.storyboard in Resources */,
 				04BFCA32223B36FA0039461D /* Assets.xcassets in Resources */,
 			);
@@ -586,6 +609,7 @@
 				04A4F0F5223B3E2D004E740D /* Common.swift in Sources */,
 				04A4F112223B4064004E740D /* UIDevice+IPAddresses.m in Sources */,
 				04A4F13A223B4791004E740D /* SHUrgentViewController.swift in Sources */,
+				04A4F14A223B862C004E740D /* SHLoginViewController.swift in Sources */,
 				04A4F144223B841E004E740D /* UIButton+init.m in Sources */,
 				04A4F130223B4748004E740D /* SHViewController.swift in Sources */,
 				04A4F0FB223B3E2D004E740D /* SHSocketTools + crc.swift in Sources */,

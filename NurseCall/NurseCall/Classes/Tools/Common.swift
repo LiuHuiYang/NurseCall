@@ -8,4 +8,5 @@
 
 import UIKit
 
-
+/// 是否登录标记
+let isLoginKey = "isLoginKey"
