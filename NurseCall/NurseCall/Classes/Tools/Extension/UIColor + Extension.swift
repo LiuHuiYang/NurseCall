@@ -36,7 +36,13 @@ import UIKit
     }
     
     
-    static func color(colorHex: UInt32, alpha: CGFloat = 1.0) -> UIColor? {
+    /// 依据RGB值直接设置颜色
+    ///
+    /// - Parameters:
+    ///   - colorHex: 颜色的十六进制表示(必须是0x开头)
+    ///   - alpha: 透明度度[0,1]
+    /// - Returns: UIColor
+    static func color(colorHex: UInt32, alpha: CGFloat = 1.0) -> UIColor {
  
         // 获得各种颜色 255 255 255 ==  #0x ff ff ff
         let red = UInt8((colorHex & 0xff0000) >> 16)

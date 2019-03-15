@@ -23,6 +23,14 @@
 		04A4F111223B4064004E740D /* UIDevice+DeviceType.m in Sources */ = {isa = PBXBuildFile; fileRef = 04A4F10C223B4063004E740D /* UIDevice+DeviceType.m */; };
 		04A4F112223B4064004E740D /* UIDevice+IPAddresses.m in Sources */ = {isa = PBXBuildFile; fileRef = 04A4F10F223B4064004E740D /* UIDevice+IPAddresses.m */; };
 		04A4F116223B4080004E740D /* FileTools.m in Sources */ = {isa = PBXBuildFile; fileRef = 04A4F114223B4080004E740D /* FileTools.m */; };
+		04A4F130223B4748004E740D /* SHViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A4F12D223B4747004E740D /* SHViewController.swift */; };
+		04A4F131223B4748004E740D /* SHNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A4F12E223B4747004E740D /* SHNavigationController.swift */; };
+		04A4F132223B4748004E740D /* SHMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A4F12F223B4747004E740D /* SHMainViewController.swift */; };
+		04A4F134223B4763004E740D /* SHNurseStationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A4F133223B4763004E740D /* SHNurseStationViewController.swift */; };
+		04A4F136223B4774004E740D /* SHSettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A4F135223B4774004E740D /* SHSettingViewController.swift */; };
+		04A4F138223B4783004E740D /* SHSickRoomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A4F137223B4783004E740D /* SHSickRoomViewController.swift */; };
+		04A4F13A223B4791004E740D /* SHUrgentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A4F139223B4791004E740D /* SHUrgentViewController.swift */; };
+		04A4F13C223B59A9004E740D /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A4F13B223B59A9004E740D /* Colors.swift */; };
 		04BFCA2B223B36F90039461D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04BFCA2A223B36F90039461D /* AppDelegate.swift */; };
 		04BFCA32223B36FA0039461D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 04BFCA31223B36FA0039461D /* Assets.xcassets */; };
 		04BFCA35223B36FA0039461D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04BFCA33223B36FA0039461D /* LaunchScreen.storyboard */; };
@@ -69,6 +77,14 @@
 		04A4F114223B4080004E740D /* FileTools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FileTools.m; sourceTree = "<group>"; };
 		04A4F115223B4080004E740D /* FileTools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FileTools.h; sourceTree = "<group>"; };
 		04A4F117223B410A004E740D /* NurseCall.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NurseCall.h; sourceTree = "<group>"; };
+		04A4F12D223B4747004E740D /* SHViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SHViewController.swift; sourceTree = "<group>"; };
+		04A4F12E223B4747004E740D /* SHNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SHNavigationController.swift; sourceTree = "<group>"; };
+		04A4F12F223B4747004E740D /* SHMainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SHMainViewController.swift; sourceTree = "<group>"; };
+		04A4F133223B4763004E740D /* SHNurseStationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SHNurseStationViewController.swift; sourceTree = "<group>"; };
+		04A4F135223B4774004E740D /* SHSettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SHSettingViewController.swift; sourceTree = "<group>"; };
+		04A4F137223B4783004E740D /* SHSickRoomViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SHSickRoomViewController.swift; sourceTree = "<group>"; };
+		04A4F139223B4791004E740D /* SHUrgentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SHUrgentViewController.swift; sourceTree = "<group>"; };
+		04A4F13B223B59A9004E740D /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		04BFCA27223B36F90039461D /* NurseCall.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NurseCall.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		04BFCA2A223B36F90039461D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		04BFCA31223B36FA0039461D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -135,6 +151,7 @@
 			isa = PBXGroup;
 			children = (
 				04A4F0EB223B3E2D004E740D /* Common.swift */,
+				04A4F13B223B59A9004E740D /* Colors.swift */,
 				04A4F10A223B404F004E740D /* Additional */,
 				04A4F0EA223B3E2D004E740D /* Extension */,
 			);
@@ -155,6 +172,11 @@
 		04A4F0EC223B3E2D004E740D /* Main */ = {
 			isa = PBXGroup;
 			children = (
+				04A4F12C223B4747004E740D /* Main */,
+				04A4F126223B4747004E740D /* NurseStation */,
+				04A4F124223B4747004E740D /* Setting */,
+				04A4F12A223B4747004E740D /* SickRoom */,
+				04A4F128223B4747004E740D /* Urgent */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -207,6 +229,80 @@
 				04A4F114223B4080004E740D /* FileTools.m */,
 			);
 			path = FileTools;
+			sourceTree = "<group>";
+		};
+		04A4F124223B4747004E740D /* Setting */ = {
+			isa = PBXGroup;
+			children = (
+				04A4F125223B4747004E740D /* Controller */,
+			);
+			path = Setting;
+			sourceTree = "<group>";
+		};
+		04A4F125223B4747004E740D /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				04A4F135223B4774004E740D /* SHSettingViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		04A4F126223B4747004E740D /* NurseStation */ = {
+			isa = PBXGroup;
+			children = (
+				04A4F127223B4747004E740D /* Controller */,
+			);
+			path = NurseStation;
+			sourceTree = "<group>";
+		};
+		04A4F127223B4747004E740D /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				04A4F133223B4763004E740D /* SHNurseStationViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		04A4F128223B4747004E740D /* Urgent */ = {
+			isa = PBXGroup;
+			children = (
+				04A4F129223B4747004E740D /* Controller */,
+			);
+			path = Urgent;
+			sourceTree = "<group>";
+		};
+		04A4F129223B4747004E740D /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				04A4F139223B4791004E740D /* SHUrgentViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		04A4F12A223B4747004E740D /* SickRoom */ = {
+			isa = PBXGroup;
+			children = (
+				04A4F12B223B4747004E740D /* Controller */,
+			);
+			path = SickRoom;
+			sourceTree = "<group>";
+		};
+		04A4F12B223B4747004E740D /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				04A4F137223B4783004E740D /* SHSickRoomViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		04A4F12C223B4747004E740D /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				04A4F12D223B4747004E740D /* SHViewController.swift */,
+				04A4F12E223B4747004E740D /* SHNavigationController.swift */,
+				04A4F12F223B4747004E740D /* SHMainViewController.swift */,
+			);
+			path = Main;
 			sourceTree = "<group>";
 		};
 		04BFCA1E223B36F90039461D = {
@@ -464,21 +560,29 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				04A4F138223B4783004E740D /* SHSickRoomViewController.swift in Sources */,
+				04A4F13C223B59A9004E740D /* Colors.swift in Sources */,
 				04A4F0F4223B3E2D004E740D /* SHSQLiteManager.swift in Sources */,
 				04A4F101223B3E63004E740D /* Bundle + Extension.swift in Sources */,
+				04A4F131223B4748004E740D /* SHNavigationController.swift in Sources */,
 				04A4F0F5223B3E2D004E740D /* Common.swift in Sources */,
 				04A4F112223B4064004E740D /* UIDevice+IPAddresses.m in Sources */,
+				04A4F13A223B4791004E740D /* SHUrgentViewController.swift in Sources */,
+				04A4F130223B4748004E740D /* SHViewController.swift in Sources */,
 				04A4F0FB223B3E2D004E740D /* SHSocketTools + crc.swift in Sources */,
 				04A4F0F7223B3E2D004E740D /* SHSocketTools + send.swift in Sources */,
 				04A4F100223B3E63004E740D /* PrintLog.swift in Sources */,
 				04A4F116223B4080004E740D /* FileTools.m in Sources */,
 				04A4F0FA223B3E2D004E740D /* SHSocketData.swift in Sources */,
+				04A4F136223B4774004E740D /* SHSettingViewController.swift in Sources */,
+				04A4F132223B4748004E740D /* SHMainViewController.swift in Sources */,
 				04A4F0F6223B3E2D004E740D /* SHSocketTools + cache.swift in Sources */,
 				04A4F0F9223B3E2D004E740D /* SHSocketTools.swift in Sources */,
 				04A4F103223B3E63004E740D /* UIView + Extension.swift in Sources */,
 				04A4F102223B3E63004E740D /* UIColor + Extension.swift in Sources */,
 				04A4F111223B4064004E740D /* UIDevice+DeviceType.m in Sources */,
 				04BFCA2B223B36F90039461D /* AppDelegate.swift in Sources */,
+				04A4F134223B4763004E740D /* SHNurseStationViewController.swift in Sources */,
 				04A4F0F8223B3E2D004E740D /* SHSocketTools + receive.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
