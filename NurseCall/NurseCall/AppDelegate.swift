@@ -20,6 +20,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window?.rootViewController = UITabBarController()
         window?.makeKeyAndVisible()
         
+        _ = SHSQLiteManager.shared
+        
         return true
     }
 

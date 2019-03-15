@@ -7,6 +7,22 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		04A4F0F4223B3E2D004E740D /* SHSQLiteManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A4F0E8223B3E2D004E740D /* SHSQLiteManager.swift */; };
+		04A4F0F5223B3E2D004E740D /* Common.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A4F0EB223B3E2D004E740D /* Common.swift */; };
+		04A4F0F6223B3E2D004E740D /* SHSocketTools + cache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A4F0EE223B3E2D004E740D /* SHSocketTools + cache.swift */; };
+		04A4F0F7223B3E2D004E740D /* SHSocketTools + send.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A4F0EF223B3E2D004E740D /* SHSocketTools + send.swift */; };
+		04A4F0F8223B3E2D004E740D /* SHSocketTools + receive.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A4F0F0223B3E2D004E740D /* SHSocketTools + receive.swift */; };
+		04A4F0F9223B3E2D004E740D /* SHSocketTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A4F0F1223B3E2D004E740D /* SHSocketTools.swift */; };
+		04A4F0FA223B3E2D004E740D /* SHSocketData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A4F0F2223B3E2D004E740D /* SHSocketData.swift */; };
+		04A4F0FB223B3E2D004E740D /* SHSocketTools + crc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A4F0F3223B3E2D004E740D /* SHSocketTools + crc.swift */; };
+		04A4F100223B3E63004E740D /* PrintLog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A4F0FC223B3E63004E740D /* PrintLog.swift */; };
+		04A4F101223B3E63004E740D /* Bundle + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A4F0FD223B3E63004E740D /* Bundle + Extension.swift */; };
+		04A4F102223B3E63004E740D /* UIColor + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A4F0FE223B3E63004E740D /* UIColor + Extension.swift */; };
+		04A4F103223B3E63004E740D /* UIView + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A4F0FF223B3E63004E740D /* UIView + Extension.swift */; };
+		04A4F105223B3EA0004E740D /* SQL.sql in Resources */ = {isa = PBXBuildFile; fileRef = 04A4F104223B3EA0004E740D /* SQL.sql */; };
+		04A4F111223B4064004E740D /* UIDevice+DeviceType.m in Sources */ = {isa = PBXBuildFile; fileRef = 04A4F10C223B4063004E740D /* UIDevice+DeviceType.m */; };
+		04A4F112223B4064004E740D /* UIDevice+IPAddresses.m in Sources */ = {isa = PBXBuildFile; fileRef = 04A4F10F223B4064004E740D /* UIDevice+IPAddresses.m */; };
+		04A4F116223B4080004E740D /* FileTools.m in Sources */ = {isa = PBXBuildFile; fileRef = 04A4F114223B4080004E740D /* FileTools.m */; };
 		04BFCA2B223B36F90039461D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04BFCA2A223B36F90039461D /* AppDelegate.swift */; };
 		04BFCA32223B36FA0039461D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 04BFCA31223B36FA0039461D /* Assets.xcassets */; };
 		04BFCA35223B36FA0039461D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04BFCA33223B36FA0039461D /* LaunchScreen.storyboard */; };
@@ -33,6 +49,26 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		04A4F0E8223B3E2D004E740D /* SHSQLiteManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SHSQLiteManager.swift; sourceTree = "<group>"; };
+		04A4F0EB223B3E2D004E740D /* Common.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Common.swift; sourceTree = "<group>"; };
+		04A4F0EE223B3E2D004E740D /* SHSocketTools + cache.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SHSocketTools + cache.swift"; sourceTree = "<group>"; };
+		04A4F0EF223B3E2D004E740D /* SHSocketTools + send.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SHSocketTools + send.swift"; sourceTree = "<group>"; };
+		04A4F0F0223B3E2D004E740D /* SHSocketTools + receive.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SHSocketTools + receive.swift"; sourceTree = "<group>"; };
+		04A4F0F1223B3E2D004E740D /* SHSocketTools.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SHSocketTools.swift; sourceTree = "<group>"; };
+		04A4F0F2223B3E2D004E740D /* SHSocketData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SHSocketData.swift; sourceTree = "<group>"; };
+		04A4F0F3223B3E2D004E740D /* SHSocketTools + crc.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SHSocketTools + crc.swift"; sourceTree = "<group>"; };
+		04A4F0FC223B3E63004E740D /* PrintLog.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PrintLog.swift; sourceTree = "<group>"; };
+		04A4F0FD223B3E63004E740D /* Bundle + Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Bundle + Extension.swift"; sourceTree = "<group>"; };
+		04A4F0FE223B3E63004E740D /* UIColor + Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor + Extension.swift"; sourceTree = "<group>"; };
+		04A4F0FF223B3E63004E740D /* UIView + Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView + Extension.swift"; sourceTree = "<group>"; };
+		04A4F104223B3EA0004E740D /* SQL.sql */ = {isa = PBXFileReference; lastKnownFileType = text; path = SQL.sql; sourceTree = "<group>"; };
+		04A4F10C223B4063004E740D /* UIDevice+DeviceType.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIDevice+DeviceType.m"; sourceTree = "<group>"; };
+		04A4F10D223B4063004E740D /* UIDevice+DeviceType.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIDevice+DeviceType.h"; sourceTree = "<group>"; };
+		04A4F10F223B4064004E740D /* UIDevice+IPAddresses.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIDevice+IPAddresses.m"; sourceTree = "<group>"; };
+		04A4F110223B4064004E740D /* UIDevice+IPAddresses.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIDevice+IPAddresses.h"; sourceTree = "<group>"; };
+		04A4F114223B4080004E740D /* FileTools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FileTools.m; sourceTree = "<group>"; };
+		04A4F115223B4080004E740D /* FileTools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FileTools.h; sourceTree = "<group>"; };
+		04A4F117223B410A004E740D /* NurseCall.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NurseCall.h; sourceTree = "<group>"; };
 		04BFCA27223B36F90039461D /* NurseCall.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NurseCall.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		04BFCA2A223B36F90039461D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		04BFCA31223B36FA0039461D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -75,6 +111,104 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		04A4F0E6223B3E2D004E740D /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				04A4F0EC223B3E2D004E740D /* Main */,
+				04A4F0E7223B3E2D004E740D /* DataBase */,
+				04A4F0E9223B3E2D004E740D /* Tools */,
+				04A4F0ED223B3E2D004E740D /* Socket */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		04A4F0E7223B3E2D004E740D /* DataBase */ = {
+			isa = PBXGroup;
+			children = (
+				04A4F104223B3EA0004E740D /* SQL.sql */,
+				04A4F0E8223B3E2D004E740D /* SHSQLiteManager.swift */,
+			);
+			path = DataBase;
+			sourceTree = "<group>";
+		};
+		04A4F0E9223B3E2D004E740D /* Tools */ = {
+			isa = PBXGroup;
+			children = (
+				04A4F0EB223B3E2D004E740D /* Common.swift */,
+				04A4F10A223B404F004E740D /* Additional */,
+				04A4F0EA223B3E2D004E740D /* Extension */,
+			);
+			path = Tools;
+			sourceTree = "<group>";
+		};
+		04A4F0EA223B3E2D004E740D /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				04A4F0FD223B3E63004E740D /* Bundle + Extension.swift */,
+				04A4F0FC223B3E63004E740D /* PrintLog.swift */,
+				04A4F0FE223B3E63004E740D /* UIColor + Extension.swift */,
+				04A4F0FF223B3E63004E740D /* UIView + Extension.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		04A4F0EC223B3E2D004E740D /* Main */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		04A4F0ED223B3E2D004E740D /* Socket */ = {
+			isa = PBXGroup;
+			children = (
+				04A4F0EE223B3E2D004E740D /* SHSocketTools + cache.swift */,
+				04A4F0EF223B3E2D004E740D /* SHSocketTools + send.swift */,
+				04A4F0F0223B3E2D004E740D /* SHSocketTools + receive.swift */,
+				04A4F0F1223B3E2D004E740D /* SHSocketTools.swift */,
+				04A4F0F2223B3E2D004E740D /* SHSocketData.swift */,
+				04A4F0F3223B3E2D004E740D /* SHSocketTools + crc.swift */,
+			);
+			path = Socket;
+			sourceTree = "<group>";
+		};
+		04A4F10A223B404F004E740D /* Additional */ = {
+			isa = PBXGroup;
+			children = (
+				04A4F113223B4080004E740D /* FileTools */,
+				04A4F10B223B4063004E740D /* UIDevice+DeviceType */,
+				04A4F10E223B4064004E740D /* UIDevice+IPAddresses */,
+			);
+			path = Additional;
+			sourceTree = "<group>";
+		};
+		04A4F10B223B4063004E740D /* UIDevice+DeviceType */ = {
+			isa = PBXGroup;
+			children = (
+				04A4F10C223B4063004E740D /* UIDevice+DeviceType.m */,
+				04A4F10D223B4063004E740D /* UIDevice+DeviceType.h */,
+			);
+			path = "UIDevice+DeviceType";
+			sourceTree = "<group>";
+		};
+		04A4F10E223B4064004E740D /* UIDevice+IPAddresses */ = {
+			isa = PBXGroup;
+			children = (
+				04A4F10F223B4064004E740D /* UIDevice+IPAddresses.m */,
+				04A4F110223B4064004E740D /* UIDevice+IPAddresses.h */,
+			);
+			path = "UIDevice+IPAddresses";
+			sourceTree = "<group>";
+		};
+		04A4F113223B4080004E740D /* FileTools */ = {
+			isa = PBXGroup;
+			children = (
+				04A4F115223B4080004E740D /* FileTools.h */,
+				04A4F114223B4080004E740D /* FileTools.m */,
+			);
+			path = FileTools;
+			sourceTree = "<group>";
+		};
 		04BFCA1E223B36F90039461D = {
 			isa = PBXGroup;
 			children = (
@@ -100,7 +234,9 @@
 		04BFCA29223B36F90039461D /* NurseCall */ = {
 			isa = PBXGroup;
 			children = (
+				04A4F0E6223B3E2D004E740D /* Classes */,
 				04BFCA2A223B36F90039461D /* AppDelegate.swift */,
+				04A4F117223B410A004E740D /* NurseCall.h */,
 				04BFCA31223B36FA0039461D /* Assets.xcassets */,
 				04BFCA33223B36FA0039461D /* LaunchScreen.storyboard */,
 				04BFCA36223B36FA0039461D /* Info.plist */,
@@ -250,6 +386,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				04A4F105223B3EA0004E740D /* SQL.sql in Resources */,
 				04BFCA35223B36FA0039461D /* LaunchScreen.storyboard in Resources */,
 				04BFCA32223B36FA0039461D /* Assets.xcassets in Resources */,
 			);
@@ -327,7 +464,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				04A4F0F4223B3E2D004E740D /* SHSQLiteManager.swift in Sources */,
+				04A4F101223B3E63004E740D /* Bundle + Extension.swift in Sources */,
+				04A4F0F5223B3E2D004E740D /* Common.swift in Sources */,
+				04A4F112223B4064004E740D /* UIDevice+IPAddresses.m in Sources */,
+				04A4F0FB223B3E2D004E740D /* SHSocketTools + crc.swift in Sources */,
+				04A4F0F7223B3E2D004E740D /* SHSocketTools + send.swift in Sources */,
+				04A4F100223B3E63004E740D /* PrintLog.swift in Sources */,
+				04A4F116223B4080004E740D /* FileTools.m in Sources */,
+				04A4F0FA223B3E2D004E740D /* SHSocketData.swift in Sources */,
+				04A4F0F6223B3E2D004E740D /* SHSocketTools + cache.swift in Sources */,
+				04A4F0F9223B3E2D004E740D /* SHSocketTools.swift in Sources */,
+				04A4F103223B3E63004E740D /* UIView + Extension.swift in Sources */,
+				04A4F102223B3E63004E740D /* UIColor + Extension.swift in Sources */,
+				04A4F111223B4064004E740D /* UIDevice+DeviceType.m in Sources */,
 				04BFCA2B223B36F90039461D /* AppDelegate.swift in Sources */,
+				04A4F0F8223B3E2D004E740D /* SHSocketTools + receive.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -505,6 +657,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.smarthome.NurseCall;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "$(SRCROOT)/NurseCall/NurseCall.h";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -525,6 +678,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.smarthome.NurseCall;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "$(SRCROOT)/NurseCall/NurseCall.h";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
