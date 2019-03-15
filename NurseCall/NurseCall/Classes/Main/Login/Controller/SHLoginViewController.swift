@@ -26,22 +26,76 @@ class SHLoginViewController: SHViewController {
         
         navigationItem.title = "Hospital Call System"
         
-      
-        //左侧图片
-        let leftView = UIImageView(image: #imageLiteral(resourceName: "back_navigation_bar"))
-        leftView.contentMode = .center
+        // 键盘的启动与回收
+        NotificationCenter.default.addObserver(
+            self,
+            selector: #selector(keyBoardWillShow(_:)),
+            name:UIResponder.keyboardWillShowNotification,
+            object: nil
+        )
         
-        //添加背景视图
-        let bgView = UIView()
-        bgView.backgroundColor = UIColor.clear
-        bgView.frame = CGRect(x: 0, y: 0, width: 30, height: 30)
-//        bgView.addSubview(leftView)
-//        leftView.snp.makeConstraints { (make) in
-//            make.center.equalTo(bgView)
-//            make.width.height.equalTo(15)
-//        }
+        NotificationCenter.default.addObserver(
+            self,
+            selector: #selector(keyBoardWillHide(_:)),
+            name:UIResponder.keyboardWillHideNotification,
+            object: nil
+        )
         
-        accountTextField.leftView = bgView
+        
+        
+        //        let leftView = UIView(frame: CGRect(x: 0, y: 0, width: 30, height: 30))
+        //        leftView.backgroundColor = UIColor.red
+        //
+        //        accountTextField.leftView = leftView
+    }
+    
+    deinit {
+        
+        NotificationCenter.default.removeObserver(self)
+    }
+}
+
+
+// MARK: - 键盘的通知处理
+extension SHLoginViewController {
+    
+    @objc private func keyBoardWillShow(_ notification: Notification) {
+        
+        guard let info = notification.userInfo,
+            let keyboardSize =
+                info[UIResponder.keyboardFrameEndUserInfoKey] as? CGRect,
+            let duration =
+            info[UIResponder.keyboardAnimationDurationUserInfoKey] as? TimeInterval
+            
+            else {
+            
+            return
+        }
+        
+        
+        // 计算距离
+        let offsetY = keyboardSize.origin.y
+        
+        print("移动距离: \(offsetY)")
+        
+        // 动画移动
+        UIView.animate(withDuration: duration) {
+
+        }
+        
+ 
+//        //键盘的y偏移量
+//        let offsetY = kbRect.origin.y - UIScreen.main.bounds.height
+ 
+
+    }
+    
+    
+    /// 键盘消失
+    ///
+    /// - Parameter notification: notification description
+    @objc private func keyBoardWillHide(_ notification: Notification) {
+        
         
     }
 }
@@ -54,12 +108,12 @@ extension SHLoginViewController {
         
         guard let accout = accountTextField.text,
             let password = passwordTextField.text else {
-            
-            SVProgressHUD.showError(
-                withStatus: "Error in account or password"
-            )
                 
-            return
+                SVProgressHUD.showError(
+                    withStatus: "Error in account or password"
+                )
+                
+                return
         }
         
         // 比较账号与密码(临时测试)
@@ -81,7 +135,7 @@ extension SHLoginViewController {
                 UIApplication.shared.keyWindow?.rootViewController =
                     SHMainViewController()
             })
-        
+            
             
         } else {
             
@@ -104,7 +158,6 @@ extension SHLoginViewController {
 
 // MARK: - UITextFieldDelegate
 extension SHLoginViewController : UITextFieldDelegate {
-    
     
     /// 确定点击
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
