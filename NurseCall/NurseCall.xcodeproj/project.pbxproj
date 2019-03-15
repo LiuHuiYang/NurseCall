@@ -31,6 +31,8 @@
 		04A4F138223B4783004E740D /* SHSickRoomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A4F137223B4783004E740D /* SHSickRoomViewController.swift */; };
 		04A4F13A223B4791004E740D /* SHUrgentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A4F139223B4791004E740D /* SHUrgentViewController.swift */; };
 		04A4F13C223B59A9004E740D /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A4F13B223B59A9004E740D /* Colors.swift */; };
+		04A4F144223B841E004E740D /* UIButton+init.m in Sources */ = {isa = PBXBuildFile; fileRef = 04A4F140223B841E004E740D /* UIButton+init.m */; };
+		04A4F145223B841E004E740D /* UIBarButtonItem+init.m in Sources */ = {isa = PBXBuildFile; fileRef = 04A4F143223B841E004E740D /* UIBarButtonItem+init.m */; };
 		04BFCA2B223B36F90039461D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04BFCA2A223B36F90039461D /* AppDelegate.swift */; };
 		04BFCA32223B36FA0039461D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 04BFCA31223B36FA0039461D /* Assets.xcassets */; };
 		04BFCA35223B36FA0039461D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04BFCA33223B36FA0039461D /* LaunchScreen.storyboard */; };
@@ -85,6 +87,10 @@
 		04A4F137223B4783004E740D /* SHSickRoomViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SHSickRoomViewController.swift; sourceTree = "<group>"; };
 		04A4F139223B4791004E740D /* SHUrgentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SHUrgentViewController.swift; sourceTree = "<group>"; };
 		04A4F13B223B59A9004E740D /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
+		04A4F140223B841E004E740D /* UIButton+init.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+init.m"; sourceTree = "<group>"; };
+		04A4F141223B841E004E740D /* UIBarButtonItem+init.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIBarButtonItem+init.h"; sourceTree = "<group>"; };
+		04A4F142223B841E004E740D /* UIButton+init.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+init.h"; sourceTree = "<group>"; };
+		04A4F143223B841E004E740D /* UIBarButtonItem+init.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIBarButtonItem+init.m"; sourceTree = "<group>"; };
 		04BFCA27223B36F90039461D /* NurseCall.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NurseCall.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		04BFCA2A223B36F90039461D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		04BFCA31223B36FA0039461D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -197,6 +203,7 @@
 		04A4F10A223B404F004E740D /* Additional */ = {
 			isa = PBXGroup;
 			children = (
+				04A4F13F223B8410004E740D /* UIBarButtonItem */,
 				04A4F113223B4080004E740D /* FileTools */,
 				04A4F10B223B4063004E740D /* UIDevice+DeviceType */,
 				04A4F10E223B4064004E740D /* UIDevice+IPAddresses */,
@@ -303,6 +310,17 @@
 				04A4F12F223B4747004E740D /* SHMainViewController.swift */,
 			);
 			path = Main;
+			sourceTree = "<group>";
+		};
+		04A4F13F223B8410004E740D /* UIBarButtonItem */ = {
+			isa = PBXGroup;
+			children = (
+				04A4F141223B841E004E740D /* UIBarButtonItem+init.h */,
+				04A4F143223B841E004E740D /* UIBarButtonItem+init.m */,
+				04A4F142223B841E004E740D /* UIButton+init.h */,
+				04A4F140223B841E004E740D /* UIButton+init.m */,
+			);
+			path = UIBarButtonItem;
 			sourceTree = "<group>";
 		};
 		04BFCA1E223B36F90039461D = {
@@ -568,6 +586,7 @@
 				04A4F0F5223B3E2D004E740D /* Common.swift in Sources */,
 				04A4F112223B4064004E740D /* UIDevice+IPAddresses.m in Sources */,
 				04A4F13A223B4791004E740D /* SHUrgentViewController.swift in Sources */,
+				04A4F144223B841E004E740D /* UIButton+init.m in Sources */,
 				04A4F130223B4748004E740D /* SHViewController.swift in Sources */,
 				04A4F0FB223B3E2D004E740D /* SHSocketTools + crc.swift in Sources */,
 				04A4F0F7223B3E2D004E740D /* SHSocketTools + send.swift in Sources */,
@@ -581,6 +600,7 @@
 				04A4F103223B3E63004E740D /* UIView + Extension.swift in Sources */,
 				04A4F102223B3E63004E740D /* UIColor + Extension.swift in Sources */,
 				04A4F111223B4064004E740D /* UIDevice+DeviceType.m in Sources */,
+				04A4F145223B841E004E740D /* UIBarButtonItem+init.m in Sources */,
 				04BFCA2B223B36F90039461D /* AppDelegate.swift in Sources */,
 				04A4F134223B4763004E740D /* SHNurseStationViewController.swift in Sources */,
 				04A4F0F8223B3E2D004E740D /* SHSocketTools + receive.swift in Sources */,
