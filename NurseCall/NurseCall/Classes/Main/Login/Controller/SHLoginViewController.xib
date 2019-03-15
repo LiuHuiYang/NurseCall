@@ -67,7 +67,7 @@
                         <constraint firstItem="l9f-ca-aM4" firstAttribute="top" secondItem="sSz-RI-Grj" secondAttribute="bottom" constant="20" id="zFj-eJ-wvz"/>
                     </constraints>
                 </view>
-                <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4BF-wE-OTs">
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4BF-wE-OTs">
                     <rect key="frame" x="40" y="368.5" width="240" height="49"/>
                     <color key="backgroundColor" red="0.19215686274509802" green="0.59607843137254901" blue="0.94901960784313721" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <constraints>

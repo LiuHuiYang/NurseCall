@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SVProgressHUD
 
 class SHLoginViewController: SHViewController {
     
@@ -25,6 +26,7 @@ class SHLoginViewController: SHViewController {
         
         navigationItem.title = "Hospital Call System"
         
+      
         //左侧图片
         let leftView = UIImageView(image: #imageLiteral(resourceName: "back_navigation_bar"))
         leftView.contentMode = .center
@@ -42,10 +44,6 @@ class SHLoginViewController: SHViewController {
         accountTextField.leftView = bgView
         
     }
-
- 
-    
-    
 }
 
 
@@ -57,7 +55,10 @@ extension SHLoginViewController {
         guard let accout = accountTextField.text,
             let password = passwordTextField.text else {
             
-            print("账号的长度: 不能为空")
+            SVProgressHUD.showError(
+                withStatus: "Error in account or password"
+            )
+                
             return
         }
         
@@ -65,23 +66,45 @@ extension SHLoginViewController {
         if accout == "root" &&
             password == "root" {
             
-            // 设置成功登录标志
-            UserDefaults.standard.set(true, forKey: isLoginKey)
-            UserDefaults.standard.synchronize()
+            // 正在登录
+            SVProgressHUD.show(withStatus: "Logging ...")
             
-            // 切换控制器
-            UIApplication.shared.keyWindow?.rootViewController =
-                SHMainViewController()
+            DispatchQueue.main.asyncAfter(deadline: .now() + 3, execute:{
+                
+                SVProgressHUD.dismiss()
+                
+                // 设置成功登录标志
+                UserDefaults.standard.set(true, forKey: isLoginKey)
+                UserDefaults.standard.synchronize()
+                
+                // 切换控制器
+                UIApplication.shared.keyWindow?.rootViewController =
+                    SHMainViewController()
+            })
+        
             
         } else {
             
-            print("账号或密码错误")
+            SVProgressHUD.showError(
+                withStatus: "Error in account or password"
+            )
+            
+            DispatchQueue.main.asyncAfter(deadline: .now() + 2, execute:{
+                
+                SVProgressHUD.dismiss()
+                
+                self.accountTextField.text = nil
+                self.passwordTextField.text = nil
+                
+                self.accountTextField.becomeFirstResponder()
+            })
         }
     }
 }
 
 // MARK: - UITextFieldDelegate
 extension SHLoginViewController : UITextFieldDelegate {
+    
     
     /// 确定点击
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {

@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SVProgressHUD
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -20,8 +21,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         window = UIWindow(frame: UIScreen.main.bounds)
         
+        var isLogin = UserDefaults.standard.bool(forKey: isLoginKey)
+        
+        isLogin = false
+        
         window?.rootViewController =
-            UserDefaults.standard.bool(forKey: isLoginKey) ?
+            isLogin ?
                 SHMainViewController() :
                 SHNavigationController(rootViewController:
                     SHLoginViewController()
@@ -30,6 +35,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window?.makeKeyAndVisible()
         
         _ = SHSQLiteManager.shared
+        
+        // 设置样式
+        SVProgressHUD.setDefaultStyle(.dark)
+        SVProgressHUD.setMinimumDismissTimeInterval(3.0)
+        SVProgressHUD.setFont(
+            UIFont.preferredFont(forTextStyle: .title3)
+        )
         
         return true
     }

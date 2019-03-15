@@ -9,7 +9,9 @@ pod 'FMDB'               # sqlite数据库框架
 
 pod 'SAMKeychain'       # 钥匙串框架
 
+pod 'SVProgressHUD'    # 指示器
 
+pod "GCDWebServer", "~> 3.0" # 用于PC导入与导出数据库
  
 end
 
