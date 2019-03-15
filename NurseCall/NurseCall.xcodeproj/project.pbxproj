@@ -1,0 +1,657 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		04BFCA2B223B36F90039461D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04BFCA2A223B36F90039461D /* AppDelegate.swift */; };
+		04BFCA32223B36FA0039461D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 04BFCA31223B36FA0039461D /* Assets.xcassets */; };
+		04BFCA35223B36FA0039461D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04BFCA33223B36FA0039461D /* LaunchScreen.storyboard */; };
+		04BFCA40223B36FB0039461D /* NurseCallTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04BFCA3F223B36FB0039461D /* NurseCallTests.swift */; };
+		04BFCA4B223B36FB0039461D /* NurseCallUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04BFCA4A223B36FB0039461D /* NurseCallUITests.swift */; };
+		FB2BD6E93D299A03D3CD94E2 /* Pods_NurseCall.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2EC9BB3D8DE42F0F4C5449F5 /* Pods_NurseCall.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		04BFCA3C223B36FB0039461D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 04BFCA1F223B36F90039461D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 04BFCA26223B36F90039461D;
+			remoteInfo = NurseCall;
+		};
+		04BFCA47223B36FB0039461D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 04BFCA1F223B36F90039461D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 04BFCA26223B36F90039461D;
+			remoteInfo = NurseCall;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		04BFCA27223B36F90039461D /* NurseCall.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NurseCall.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		04BFCA2A223B36F90039461D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		04BFCA31223B36FA0039461D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		04BFCA34223B36FA0039461D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		04BFCA36223B36FA0039461D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		04BFCA3B223B36FB0039461D /* NurseCallTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NurseCallTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		04BFCA3F223B36FB0039461D /* NurseCallTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NurseCallTests.swift; sourceTree = "<group>"; };
+		04BFCA41223B36FB0039461D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		04BFCA46223B36FB0039461D /* NurseCallUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NurseCallUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		04BFCA4A223B36FB0039461D /* NurseCallUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NurseCallUITests.swift; sourceTree = "<group>"; };
+		04BFCA4C223B36FB0039461D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		21B438401F17820EBE3CD26A /* Pods-NurseCall.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NurseCall.release.xcconfig"; path = "Target Support Files/Pods-NurseCall/Pods-NurseCall.release.xcconfig"; sourceTree = "<group>"; };
+		2EC9BB3D8DE42F0F4C5449F5 /* Pods_NurseCall.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NurseCall.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		67FAE40B9B7C04FAA7AF3944 /* Pods-NurseCall.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NurseCall.debug.xcconfig"; path = "Target Support Files/Pods-NurseCall/Pods-NurseCall.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		04BFCA24223B36F90039461D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FB2BD6E93D299A03D3CD94E2 /* Pods_NurseCall.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		04BFCA38223B36FB0039461D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		04BFCA43223B36FB0039461D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		04BFCA1E223B36F90039461D = {
+			isa = PBXGroup;
+			children = (
+				04BFCA29223B36F90039461D /* NurseCall */,
+				04BFCA3E223B36FB0039461D /* NurseCallTests */,
+				04BFCA49223B36FB0039461D /* NurseCallUITests */,
+				04BFCA28223B36F90039461D /* Products */,
+				98BEE7C962E083575C5CAEBC /* Pods */,
+				3DD969F46611F60B9749C1B3 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		04BFCA28223B36F90039461D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				04BFCA27223B36F90039461D /* NurseCall.app */,
+				04BFCA3B223B36FB0039461D /* NurseCallTests.xctest */,
+				04BFCA46223B36FB0039461D /* NurseCallUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		04BFCA29223B36F90039461D /* NurseCall */ = {
+			isa = PBXGroup;
+			children = (
+				04BFCA2A223B36F90039461D /* AppDelegate.swift */,
+				04BFCA31223B36FA0039461D /* Assets.xcassets */,
+				04BFCA33223B36FA0039461D /* LaunchScreen.storyboard */,
+				04BFCA36223B36FA0039461D /* Info.plist */,
+			);
+			path = NurseCall;
+			sourceTree = "<group>";
+		};
+		04BFCA3E223B36FB0039461D /* NurseCallTests */ = {
+			isa = PBXGroup;
+			children = (
+				04BFCA3F223B36FB0039461D /* NurseCallTests.swift */,
+				04BFCA41223B36FB0039461D /* Info.plist */,
+			);
+			path = NurseCallTests;
+			sourceTree = "<group>";
+		};
+		04BFCA49223B36FB0039461D /* NurseCallUITests */ = {
+			isa = PBXGroup;
+			children = (
+				04BFCA4A223B36FB0039461D /* NurseCallUITests.swift */,
+				04BFCA4C223B36FB0039461D /* Info.plist */,
+			);
+			path = NurseCallUITests;
+			sourceTree = "<group>";
+		};
+		3DD969F46611F60B9749C1B3 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2EC9BB3D8DE42F0F4C5449F5 /* Pods_NurseCall.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		98BEE7C962E083575C5CAEBC /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				67FAE40B9B7C04FAA7AF3944 /* Pods-NurseCall.debug.xcconfig */,
+				21B438401F17820EBE3CD26A /* Pods-NurseCall.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		04BFCA26223B36F90039461D /* NurseCall */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 04BFCA4F223B36FB0039461D /* Build configuration list for PBXNativeTarget "NurseCall" */;
+			buildPhases = (
+				615FCD00BF008B2BA0E22131 /* [CP] Check Pods Manifest.lock */,
+				04BFCA23223B36F90039461D /* Sources */,
+				04BFCA24223B36F90039461D /* Frameworks */,
+				04BFCA25223B36F90039461D /* Resources */,
+				DA1BDBBB9CFD9478F3524275 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = NurseCall;
+			productName = NurseCall;
+			productReference = 04BFCA27223B36F90039461D /* NurseCall.app */;
+			productType = "com.apple.product-type.application";
+		};
+		04BFCA3A223B36FB0039461D /* NurseCallTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 04BFCA52223B36FB0039461D /* Build configuration list for PBXNativeTarget "NurseCallTests" */;
+			buildPhases = (
+				04BFCA37223B36FB0039461D /* Sources */,
+				04BFCA38223B36FB0039461D /* Frameworks */,
+				04BFCA39223B36FB0039461D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				04BFCA3D223B36FB0039461D /* PBXTargetDependency */,
+			);
+			name = NurseCallTests;
+			productName = NurseCallTests;
+			productReference = 04BFCA3B223B36FB0039461D /* NurseCallTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		04BFCA45223B36FB0039461D /* NurseCallUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 04BFCA55223B36FB0039461D /* Build configuration list for PBXNativeTarget "NurseCallUITests" */;
+			buildPhases = (
+				04BFCA42223B36FB0039461D /* Sources */,
+				04BFCA43223B36FB0039461D /* Frameworks */,
+				04BFCA44223B36FB0039461D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				04BFCA48223B36FB0039461D /* PBXTargetDependency */,
+			);
+			name = NurseCallUITests;
+			productName = NurseCallUITests;
+			productReference = 04BFCA46223B36FB0039461D /* NurseCallUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		04BFCA1F223B36F90039461D /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = SH;
+				LastSwiftUpdateCheck = 1010;
+				LastUpgradeCheck = 1010;
+				ORGANIZATIONNAME = Apple;
+				TargetAttributes = {
+					04BFCA26223B36F90039461D = {
+						CreatedOnToolsVersion = 10.1;
+					};
+					04BFCA3A223B36FB0039461D = {
+						CreatedOnToolsVersion = 10.1;
+						TestTargetID = 04BFCA26223B36F90039461D;
+					};
+					04BFCA45223B36FB0039461D = {
+						CreatedOnToolsVersion = 10.1;
+						TestTargetID = 04BFCA26223B36F90039461D;
+					};
+				};
+			};
+			buildConfigurationList = 04BFCA22223B36F90039461D /* Build configuration list for PBXProject "NurseCall" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 04BFCA1E223B36F90039461D;
+			productRefGroup = 04BFCA28223B36F90039461D /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				04BFCA26223B36F90039461D /* NurseCall */,
+				04BFCA3A223B36FB0039461D /* NurseCallTests */,
+				04BFCA45223B36FB0039461D /* NurseCallUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		04BFCA25223B36F90039461D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				04BFCA35223B36FA0039461D /* LaunchScreen.storyboard in Resources */,
+				04BFCA32223B36FA0039461D /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		04BFCA39223B36FB0039461D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		04BFCA44223B36FB0039461D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		615FCD00BF008B2BA0E22131 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-NurseCall-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DA1BDBBB9CFD9478F3524275 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-NurseCall/Pods-NurseCall-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/CocoaAsyncSocket/CocoaAsyncSocket.framework",
+				"${BUILT_PRODUCTS_DIR}/FMDB/FMDB.framework",
+				"${BUILT_PRODUCTS_DIR}/SAMKeychain/SAMKeychain.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CocoaAsyncSocket.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FMDB.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SAMKeychain.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-NurseCall/Pods-NurseCall-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		04BFCA23223B36F90039461D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				04BFCA2B223B36F90039461D /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		04BFCA37223B36FB0039461D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				04BFCA40223B36FB0039461D /* NurseCallTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		04BFCA42223B36FB0039461D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				04BFCA4B223B36FB0039461D /* NurseCallUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		04BFCA3D223B36FB0039461D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 04BFCA26223B36F90039461D /* NurseCall */;
+			targetProxy = 04BFCA3C223B36FB0039461D /* PBXContainerItemProxy */;
+		};
+		04BFCA48223B36FB0039461D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 04BFCA26223B36F90039461D /* NurseCall */;
+			targetProxy = 04BFCA47223B36FB0039461D /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		04BFCA33223B36FA0039461D /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				04BFCA34223B36FA0039461D /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		04BFCA4D223B36FB0039461D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		04BFCA4E223B36FB0039461D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		04BFCA50223B36FB0039461D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 67FAE40B9B7C04FAA7AF3944 /* Pods-NurseCall.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = TMD6A3D429;
+				INFOPLIST_FILE = NurseCall/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.smarthome.NurseCall;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		04BFCA51223B36FB0039461D /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 21B438401F17820EBE3CD26A /* Pods-NurseCall.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = TMD6A3D429;
+				INFOPLIST_FILE = NurseCall/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.smarthome.NurseCall;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+		04BFCA53223B36FB0039461D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = TMD6A3D429;
+				INFOPLIST_FILE = NurseCallTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.smarthome.NurseCallTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/NurseCall.app/NurseCall";
+			};
+			name = Debug;
+		};
+		04BFCA54223B36FB0039461D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = TMD6A3D429;
+				INFOPLIST_FILE = NurseCallTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.smarthome.NurseCallTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/NurseCall.app/NurseCall";
+			};
+			name = Release;
+		};
+		04BFCA56223B36FB0039461D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = TMD6A3D429;
+				INFOPLIST_FILE = NurseCallUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.smarthome.NurseCallUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = NurseCall;
+			};
+			name = Debug;
+		};
+		04BFCA57223B36FB0039461D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = TMD6A3D429;
+				INFOPLIST_FILE = NurseCallUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.smarthome.NurseCallUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = NurseCall;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		04BFCA22223B36F90039461D /* Build configuration list for PBXProject "NurseCall" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				04BFCA4D223B36FB0039461D /* Debug */,
+				04BFCA4E223B36FB0039461D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		04BFCA4F223B36FB0039461D /* Build configuration list for PBXNativeTarget "NurseCall" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				04BFCA50223B36FB0039461D /* Debug */,
+				04BFCA51223B36FB0039461D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		04BFCA52223B36FB0039461D /* Build configuration list for PBXNativeTarget "NurseCallTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				04BFCA53223B36FB0039461D /* Debug */,
+				04BFCA54223B36FB0039461D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		04BFCA55223B36FB0039461D /* Build configuration list for PBXNativeTarget "NurseCallUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				04BFCA56223B36FB0039461D /* Debug */,
+				04BFCA57223B36FB0039461D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 04BFCA1F223B36F90039461D /* Project object */;
+}

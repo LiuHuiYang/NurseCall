@@ -1,0 +1,15 @@
+platform :ios, '9.0'
+use_frameworks!
+
+target 'NurseCall' do
+
+pod 'CocoaAsyncSocket'   # UDP 通讯 框架
+
+pod 'FMDB'               # sqlite数据库框架
+
+pod 'SAMKeychain'       # 钥匙串框架
+
+
+ 
+end
+
