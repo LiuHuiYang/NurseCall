@@ -1,0 +1,36 @@
+PODS:
+  - CocoaAsyncSocket (7.6.3)
+  - FMDB (2.7.5):
+    - FMDB/standard (= 2.7.5)
+  - FMDB/standard (2.7.5)
+  - GCDWebServer (3.5.2):
+    - GCDWebServer/Core (= 3.5.2)
+  - GCDWebServer/Core (3.5.2)
+  - SAMKeychain (1.5.3)
+  - SVProgressHUD (2.2.5)
+
+DEPENDENCIES:
+  - CocoaAsyncSocket
+  - FMDB
+  - GCDWebServer (~> 3.0)
+  - SAMKeychain
+  - SVProgressHUD
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - CocoaAsyncSocket
+    - FMDB
+    - GCDWebServer
+    - SAMKeychain
+    - SVProgressHUD
+
+SPEC CHECKSUMS:
+  CocoaAsyncSocket: eafaa68a7e0ec99ead0a7b35015e0bf25d2c8987
+  FMDB: 2ce00b547f966261cd18927a3ddb07cb6f3db82a
+  GCDWebServer: ead88cd14596dd4eae4f5830b8877c87c8728990
+  SAMKeychain: 483e1c9f32984d50ca961e26818a534283b4cd5c
+  SVProgressHUD: 1428aafac632c1f86f62aa4243ec12008d7a51d6
+
+PODFILE CHECKSUM: 9fd66d13573d536861cde0883278b693cca6abb8
+
+COCOAPODS: 1.6.0

@@ -11,11 +11,10 @@ import SVProgressHUD
 import SAMKeychain
 
 // 临时使用的测试账号与密码
-private let accountTest = "root"
-private let passwordTest = "root"
+private let accountTest = "admin"
+private let passwordTest = "123456"
 
 class SHLoginViewController: SHViewController {
-    
     
     /// 登录账号
     @IBOutlet weak var accountTextField: UITextField!
@@ -46,6 +45,7 @@ class SHLoginViewController: SHViewController {
             object: nil
         )
         
+        // 登录账号与密码框的初始化
         accountTextField.leftViewMode = .always
         passwordTextField.leftViewMode = .always
         
@@ -78,8 +78,10 @@ extension SHLoginViewController {
     
     @objc private func keyBoardWillShow(_ notification: Notification) {
         
+        print("键盘出现 \(view.frame.origin.y)")
+        
         if view.frame.origin.y != 0 {
-            return
+//            return
         }
         
         guard let info = notification.userInfo,
@@ -93,11 +95,27 @@ extension SHLoginViewController {
             return
         }
         
+        let maxY = signinButton.frame.maxY - 64
+        let marign = keyboardSize.height
+        let offsetY = maxY - marign
+        print("键盘移动\(maxY) \(marign) \(offsetY)")
+        
+        view.transform.translatedBy(x: 0, y: -100)
+        
+        
+        
         // 动画移动
         UIView.animate(withDuration: duration) {
 
-            self.view.centerY -= keyboardSize.height  * 0.5
+//            self.view.frame.origin.y = 0 - keyboardSize.height
+//            self.accountTextField.frame.origin.y -=
+//                keyboardSize.height
+            
+//            self.view.frame.origin.y -= offsetY
+//            self.view.layoutIfNeeded()
         }
+        
+        
     }
     
     
@@ -109,6 +127,8 @@ extension SHLoginViewController {
         if view.frame.origin.y == 0 {
             return
         }
+        
+        print("键盘消失 \(view.frame.origin.y)")
         
         guard let info = notification.userInfo,
 //            let keyboardSize =
@@ -134,6 +154,9 @@ extension SHLoginViewController {
 extension SHLoginViewController {
     
     @IBAction func signinButtonClick() {
+        
+        view.endEditing(true)
+        return
         
         guard let accout = accountTextField.text,
             let password = passwordTextField.text else {
