@@ -8,6 +8,11 @@
 
 import UIKit
 import SVProgressHUD
+import SAMKeychain
+
+// 临时使用的测试账号与密码
+private let accountTest = "root"
+private let passwordTest = "root"
 
 class SHLoginViewController: SHViewController {
     
@@ -41,12 +46,24 @@ class SHLoginViewController: SHViewController {
             object: nil
         )
         
+        accountTextField.leftViewMode = .always
+        passwordTextField.leftViewMode = .always
         
+        let bounds = CGRect(x: 0, y: 0, width: 30, height: 30)
+    
+        let accoutIconView = UIImageView(frame: bounds)
+        accoutIconView.image = UIImage(named: "login_account")
         
-        //        let leftView = UIView(frame: CGRect(x: 0, y: 0, width: 30, height: 30))
-        //        leftView.backgroundColor = UIColor.red
-        //
-        //        accountTextField.leftView = leftView
+        let passwordIconView = UIImageView(frame: bounds)
+        passwordIconView.image = UIImage(named: "login_password")
+    
+        accountTextField.leftView = accoutIconView
+        passwordTextField.leftView = passwordIconView
+        
+        accountTextField.tintColor = tabBarFontNormalColor
+        passwordTextField.tintColor = tabBarFontNormalColor
+        
+        accountTextField.becomeFirstResponder()
     }
     
     deinit {
@@ -61,9 +78,13 @@ extension SHLoginViewController {
     
     @objc private func keyBoardWillShow(_ notification: Notification) {
         
+        if view.frame.origin.y != 0 {
+            return
+        }
+        
         guard let info = notification.userInfo,
             let keyboardSize =
-                info[UIResponder.keyboardFrameEndUserInfoKey] as? CGRect,
+                info[UIResponder.keyboardFrameEndUserInfoKey] as?CGRect,
             let duration =
             info[UIResponder.keyboardAnimationDurationUserInfoKey] as? TimeInterval
             
@@ -72,22 +93,11 @@ extension SHLoginViewController {
             return
         }
         
-        
-        // 计算距离
-        let offsetY = keyboardSize.origin.y
-        
-        print("移动距离: \(offsetY)")
-        
         // 动画移动
         UIView.animate(withDuration: duration) {
 
+            self.view.centerY -= keyboardSize.height  * 0.5
         }
-        
- 
-//        //键盘的y偏移量
-//        let offsetY = kbRect.origin.y - UIScreen.main.bounds.height
- 
-
     }
     
     
@@ -96,7 +106,26 @@ extension SHLoginViewController {
     /// - Parameter notification: notification description
     @objc private func keyBoardWillHide(_ notification: Notification) {
         
+        if view.frame.origin.y == 0 {
+            return
+        }
         
+        guard let info = notification.userInfo,
+//            let keyboardSize =
+//            info[UIResponder.keyboardFrameEndUserInfoKey] as? CGRect,
+            let duration =
+            info[UIResponder.keyboardAnimationDurationUserInfoKey] as? TimeInterval
+            
+            else {
+                
+                return
+        }
+        
+        // 动画移动
+        UIView.animate(withDuration: duration) {
+            
+            self.view.frame.origin.y = 0
+        }
     }
 }
 
@@ -116,20 +145,30 @@ extension SHLoginViewController {
                 return
         }
         
+        view.endEditing(true)
+        
         // 比较账号与密码(临时测试)
-        if accout == "root" &&
-            password == "root" {
+        if accout == accountTest &&
+            password == passwordTest {
             
             // 正在登录
             SVProgressHUD.show(withStatus: "Logging ...")
             
-            DispatchQueue.main.asyncAfter(deadline: .now() + 3, execute:{
+            // 延时2s切换
+            DispatchQueue.main.asyncAfter(deadline: .now() + 2, execute:{
                 
                 SVProgressHUD.dismiss()
                 
                 // 设置成功登录标志
                 UserDefaults.standard.set(true, forKey: isLoginKey)
                 UserDefaults.standard.synchronize()
+                
+                // 保存密码
+                SAMKeychain.setPassword(
+                    password,
+                    forService: accout,
+                    account: accout
+                )
                 
                 // 切换控制器
                 UIApplication.shared.keyWindow?.rootViewController =

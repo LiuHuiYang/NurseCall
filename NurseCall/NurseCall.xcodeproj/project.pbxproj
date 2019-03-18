@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0428CCD8223F4B62008378A3 /* SHServiceType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0428CCD7223F4B62008378A3 /* SHServiceType.swift */; };
 		04A4F0F4223B3E2D004E740D /* SHSQLiteManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A4F0E8223B3E2D004E740D /* SHSQLiteManager.swift */; };
 		04A4F0F5223B3E2D004E740D /* Common.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A4F0EB223B3E2D004E740D /* Common.swift */; };
 		04A4F0F6223B3E2D004E740D /* SHSocketTools + cache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A4F0EE223B3E2D004E740D /* SHSocketTools + cache.swift */; };
@@ -61,6 +62,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0428CCD7223F4B62008378A3 /* SHServiceType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SHServiceType.swift; sourceTree = "<group>"; };
 		04A4F0E8223B3E2D004E740D /* SHSQLiteManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SHSQLiteManager.swift; sourceTree = "<group>"; };
 		04A4F0EB223B3E2D004E740D /* Common.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Common.swift; sourceTree = "<group>"; };
 		04A4F0EE223B3E2D004E740D /* SHSocketTools + cache.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SHSocketTools + cache.swift"; sourceTree = "<group>"; };
@@ -137,6 +139,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0428CCD6223F4AE4008378A3 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				0428CCD7223F4B62008378A3 /* SHServiceType.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
 		04A4F0E6223B3E2D004E740D /* Classes */ = {
 			isa = PBXGroup;
 			children = (
@@ -182,6 +192,7 @@
 		04A4F0EC223B3E2D004E740D /* Main */ = {
 			isa = PBXGroup;
 			children = (
+				0428CCD6223F4AE4008378A3 /* Service */,
 				04A4F146223B859B004E740D /* Login */,
 				04A4F12C223B4747004E740D /* Main */,
 				04A4F126223B4747004E740D /* NurseStation */,
@@ -617,6 +628,7 @@
 				04A4F144223B841E004E740D /* UIButton+init.m in Sources */,
 				04A4F130223B4748004E740D /* SHViewController.swift in Sources */,
 				04A4F0FB223B3E2D004E740D /* SHSocketTools + crc.swift in Sources */,
+				0428CCD8223F4B62008378A3 /* SHServiceType.swift in Sources */,
 				04A4F0F7223B3E2D004E740D /* SHSocketTools + send.swift in Sources */,
 				04A4F100223B3E63004E740D /* PrintLog.swift in Sources */,
 				04A4F116223B4080004E740D /* FileTools.m in Sources */,
