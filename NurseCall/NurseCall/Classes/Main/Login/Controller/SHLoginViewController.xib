@@ -13,6 +13,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SHLoginViewController" customModule="NurseCall" customModuleProvider="target">
             <connections>
                 <outlet property="accountTextField" destination="sSz-RI-Grj" id="Bpu-vf-fD1"/>
+                <outlet property="iconCeterVerticalConstraint" destination="iPK-yp-fWn" id="S0X-M9-ZHj"/>
                 <outlet property="passwordTextField" destination="l9f-ca-aM4" id="2qt-Oa-oeH"/>
                 <outlet property="signinButton" destination="4BF-wE-OTs" id="gkF-vE-eYI"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>

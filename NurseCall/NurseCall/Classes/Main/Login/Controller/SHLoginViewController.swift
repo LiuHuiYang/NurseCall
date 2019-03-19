@@ -16,6 +16,10 @@ private let passwordTest = "123456"
 
 class SHLoginViewController: SHViewController {
     
+    
+    /// 基准垂直方向的约束
+    @IBOutlet weak var iconCeterVerticalConstraint: NSLayoutConstraint!
+    
     /// 登录账号
     @IBOutlet weak var accountTextField: UITextField!
     
@@ -78,15 +82,14 @@ extension SHLoginViewController {
     
     @objc private func keyBoardWillShow(_ notification: Notification) {
         
-        print("键盘出现 \(view.frame.origin.y)")
-        
-        if view.frame.origin.y != 0 {
-//            return
+        if iconCeterVerticalConstraint.constant != 0 {
+            return
         }
         
         guard let info = notification.userInfo,
             let keyboardSize =
                 info[UIResponder.keyboardFrameEndUserInfoKey] as?CGRect,
+            
             let duration =
             info[UIResponder.keyboardAnimationDurationUserInfoKey] as? TimeInterval
             
@@ -95,44 +98,30 @@ extension SHLoginViewController {
             return
         }
         
-        let maxY = signinButton.frame.maxY - 64
-        let marign = keyboardSize.height
-        let offsetY = maxY - marign
-        print("键盘移动\(maxY) \(marign) \(offsetY)")
+        // 增加20的作为余量
+        let marign =
+            UIScreen.main.bounds.height - keyboardSize.height
         
-        view.transform.translatedBy(x: 0, y: -100)
+        var offsetY = signinButton.frame.maxY - marign
         
-        
+        offsetY < 0 ? (offsetY = 20) : (offsetY += 20)
         
         // 动画移动
         UIView.animate(withDuration: duration) {
-
-//            self.view.frame.origin.y = 0 - keyboardSize.height
-//            self.accountTextField.frame.origin.y -=
-//                keyboardSize.height
-            
-//            self.view.frame.origin.y -= offsetY
-//            self.view.layoutIfNeeded()
+ 
+            self.iconCeterVerticalConstraint.constant = 0 - offsetY
+            self.view.layoutIfNeeded()
         }
-        
-        
     }
-    
     
     /// 键盘消失
     ///
     /// - Parameter notification: notification description
     @objc private func keyBoardWillHide(_ notification: Notification) {
         
-        if view.frame.origin.y == 0 {
-            return
-        }
-        
-        print("键盘消失 \(view.frame.origin.y)")
-        
         guard let info = notification.userInfo,
-//            let keyboardSize =
-//            info[UIResponder.keyboardFrameEndUserInfoKey] as? CGRect,
+            let keyboardSize =
+            info[UIResponder.keyboardFrameEndUserInfoKey] as? CGRect,
             let duration =
             info[UIResponder.keyboardAnimationDurationUserInfoKey] as? TimeInterval
             
@@ -141,10 +130,14 @@ extension SHLoginViewController {
                 return
         }
         
-        // 动画移动
-        UIView.animate(withDuration: duration) {
+        if keyboardSize.height != 0 &&
+            iconCeterVerticalConstraint.constant != 0 {
             
-            self.view.frame.origin.y = 0
+            UIView.animate(withDuration: duration) {
+                
+                self.iconCeterVerticalConstraint.constant = 0
+                self.view.layoutIfNeeded()
+            }
         }
     }
 }
@@ -154,9 +147,6 @@ extension SHLoginViewController {
 extension SHLoginViewController {
     
     @IBAction func signinButtonClick() {
-        
-        view.endEditing(true)
-        return
         
         guard let accout = accountTextField.text,
             let password = passwordTextField.text else {
@@ -178,7 +168,7 @@ extension SHLoginViewController {
             SVProgressHUD.show(withStatus: "Logging ...")
             
             // 延时2s切换
-            DispatchQueue.main.asyncAfter(deadline: .now() + 2, execute:{
+            DispatchQueue.main.asyncAfter(deadline: .now() + 1.5, execute:{
                 
                 SVProgressHUD.dismiss()
                 
@@ -226,8 +216,10 @@ extension SHLoginViewController : UITextFieldDelegate {
         
         if textField == accountTextField {
             
-            accountTextField.resignFirstResponder()
+            // 防止因为这句话退出键盘 出现抖动的情况
+//            accountTextField.resignFirstResponder()
             passwordTextField.becomeFirstResponder()
+            
         } else if textField == passwordTextField {
             
             passwordTextField.resignFirstResponder()
