@@ -71,18 +71,20 @@ extension SHSocketTools: GCDAsyncUdpSocketDelegate {
             isReceived: true
         )
 
-        let broadcastMessage = [
-            SHSocketTools.broadcastNotificationName:
-            socketData
-        ]
+//        let broadcastMessage = [
+//            SHSocketTools.broadcastNotificationName:
+//            socketData
+//        ]
         
         DispatchQueue.main.async {
         
-            NotificationCenter.default.post(
-                name:NSNotification.Name(rawValue: SHSocketTools.broadcastNotificationName),
-                object: nil,
-                userInfo: broadcastMessage
-            )
+//            NotificationCenter.default.post(
+//                name:NSNotification.Name(rawValue: SHSocketTools.broadcastNotificationName),
+//                object: nil,
+//                userInfo: broadcastMessage
+//            )
+            
+            SHServiceTools.receivingBroadcastData(socketData)
         }
     }
     

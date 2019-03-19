@@ -10,7 +10,7 @@ import Foundation
 
 // 服务类型
 
-enum SHServiceType : Int {
+enum SHServiceType : UInt8 {
     
     case none                   // 没有服务
     
@@ -54,7 +54,7 @@ enum SHServiceType : Int {
 }
 
 // 服务的状态
-enum SHServiceStatus : Int {
+enum SHServiceStatus : UInt8 {
     
     case on = 255           // 打开服务
     

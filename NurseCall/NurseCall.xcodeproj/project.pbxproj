@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0424B2012240917A0040BD12 /* SHServiceTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0424B2002240917A0040BD12 /* SHServiceTools.swift */; };
 		0428CCD8223F4B62008378A3 /* SHServiceType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0428CCD7223F4B62008378A3 /* SHServiceType.swift */; };
 		0428CD4A223F86FA008378A3 /* SHSettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0428CD48223F86FA008378A3 /* SHSettingViewController.swift */; };
 		0428CD4B223F86FA008378A3 /* SHSettingViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0428CD49223F86FA008378A3 /* SHSettingViewController.storyboard */; };
@@ -68,6 +69,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0424B2002240917A0040BD12 /* SHServiceTools.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SHServiceTools.swift; sourceTree = "<group>"; };
 		0428CCD7223F4B62008378A3 /* SHServiceType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SHServiceType.swift; sourceTree = "<group>"; };
 		0428CD48223F86FA008378A3 /* SHSettingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SHSettingViewController.swift; sourceTree = "<group>"; };
 		0428CD49223F86FA008378A3 /* SHSettingViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = SHSettingViewController.storyboard; sourceTree = "<group>"; };
@@ -155,6 +157,7 @@
 			isa = PBXGroup;
 			children = (
 				0428CCD7223F4B62008378A3 /* SHServiceType.swift */,
+				0424B2002240917A0040BD12 /* SHServiceTools.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -713,6 +716,7 @@
 				04A4F14A223B862C004E740D /* SHLoginViewController.swift in Sources */,
 				04A4F144223B841E004E740D /* UIButton+init.m in Sources */,
 				04A4F130223B4748004E740D /* SHViewController.swift in Sources */,
+				0424B2012240917A0040BD12 /* SHServiceTools.swift in Sources */,
 				04A4F0FB223B3E2D004E740D /* SHSocketTools + crc.swift in Sources */,
 				0428CCD8223F4B62008378A3 /* SHServiceType.swift in Sources */,
 				04A4F0F7223B3E2D004E740D /* SHSocketTools + send.swift in Sources */,

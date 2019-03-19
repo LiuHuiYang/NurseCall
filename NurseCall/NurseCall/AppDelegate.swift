@@ -17,16 +17,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         
-        
-        
         window = UIWindow(frame: UIScreen.main.bounds)
         
-        var isLogin = UserDefaults.standard.bool(forKey: isLoginKey)
-        
-        isLogin = false
-        
         window?.rootViewController =
-            isLogin ?
+            UserDefaults.standard.bool(forKey: isLoginKey) ?
                 SHMainViewController() :
                 SHNavigationController(rootViewController:
                     SHLoginViewController()
