@@ -11,8 +11,8 @@ import SVProgressHUD
 import SAMKeychain
 
 // 临时使用的测试账号与密码
-private let accountTest = "admin"
-private let passwordTest = "123456"
+let accountTest = "admin"
+let passwordTest = "123456"
 
 class SHLoginViewController: SHViewController {
     
@@ -32,7 +32,7 @@ class SHLoginViewController: SHViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        navigationItem.title = "Hospital Call System"
+        navigationItem.title = "Nurse Call System"
         
         // 键盘的启动与回收
         NotificationCenter.default.addObserver(

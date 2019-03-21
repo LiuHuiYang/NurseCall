@@ -7,11 +7,15 @@
 //
 
 import UIKit
+import TYAlertController
+import SAMKeychain
+import SVProgressHUD
 
 
 class SHSettingViewController: UITableViewController {
     
-    
+    /// 属性值输入框（中间过渡）
+    private var valueTextField: UITextField?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,76 +32,23 @@ class SHSettingViewController: UITableViewController {
         
     }
     
-    // MARK: - Table view data source
-    
-    
-    /*
-     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-     let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
-     
-     // Configure the cell...
-     
-     return cell
-     }
-     */
-    
-    /*
-     // Override to support conditional editing of the table view.
-     override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
-     // Return false if you do not want the specified item to be editable.
-     return true
-     }
-     */
-    
-    /*
-     // Override to support editing the table view.
-     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
-     if editingStyle == .delete {
-     // Delete the row from the data source
-     tableView.deleteRows(at: [indexPath], with: .fade)
-     } else if editingStyle == .insert {
-     // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-     }
-     }
-     */
-    
-    /*
-     // Override to support rearranging the table view.
-     override func tableView(_ tableView: UITableView, moveRowAt fromIndexPath: IndexPath, to: IndexPath) {
-     
-     }
-     */
-    
-    /*
-     // Override to support conditional rearranging of the table view.
-     override func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
-     // Return false if you do not want the item to be re-orderable.
-     return true
-     }
-     */
-    
-    /*
-     // MARK: - Navigation
-     
-     // In a storyboard-based application, you will often want to do a little preparation before navigation
-     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-     // Get the new view controller using segue.destination.
-     // Pass the selected object to the new view controller.
-     }
-     */
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
         switch indexPath.section {
             
         case 0:
-            break
+            let callController = SHCallDeviceSettingViewController()
+            navigationController?.pushViewController(
+                callController,
+                animated: true
+            )
             
         case 1:
             break
             
         case 2:
-            break
+            logout()
             
         case 3:
             let aboutController = SHAboutViewController()
@@ -108,6 +59,84 @@ class SHSettingViewController: UITableViewController {
         default:
             break
         }
+    }
+    
+    
+    /// 退出登录
+    private func logout() {
+        
+        let alertView =
+            SHTAlertView.setupAlertView(
+                "Are you sure you want to log out?",
+                message: "",
+                isCustom: true
+        )
+        
+        alertView.addTextField(configurationHandler: { (textField) in
+            
+            textField?.becomeFirstResponder()
+            textField?.clearButtonMode = .whileEditing
+            textField?.textAlignment = .center
+         
+            textField?.placeholder = "Please input a password"
+            textField?.keyboardType = .default
+            
+            self.valueTextField = textField
+        })
+        
+        let cancelAction =
+            TYAlertAction(title: "Cancel",
+                          style: .cancel,
+                          handler: nil
+        )
+        
+        alertView.add(cancelAction)
+        
+        let sureAction = TYAlertAction(title: "Sure", style: .default) { (action) in
+            
+            // 获得密码
+            guard let inputPassword = self.valueTextField?.text,
+                let passwordString = SAMKeychain.password(
+                    forService: accountTest,
+                    account: accountTest) ,
+            
+                inputPassword == passwordString else {
+                    
+                SVProgressHUD.showError(
+                    withStatus: "Password error"
+                )
+                
+                return
+            }
+            
+            
+            
+            print("密码正确")
+            // 发送通知 切换子控制器
+            
+        }
+        
+        alertView.add(sureAction)
+        
+        
+        let alertController =
+            TYAlertController(alert: alertView,
+                              preferredStyle: .alert,
+                              transitionAnimation: .scaleFade
+        )
+        
+        if UIDevice.is3_5inch() || UIDevice.is4_0inch() {
+            
+            alertController?.alertViewOriginY =
+                navigationBarHeight + statusBarHeight
+        }
+        
+        UIApplication.shared.keyWindow?.rootViewController?.present(
+            alertController!,
+            animated: true,
+            completion: nil
+        )
+        
     }
 }
 

@@ -15,7 +15,8 @@ class SHMainViewController: UITabBarController {
 
         // 添加所有的子控制器
         setupChildControllers()
-
+        
+        tabBar.isTranslucent = false
         tabBar.barTintColor = UIColor(white: 237.0/255.0, alpha: 1.0)
     }
 }

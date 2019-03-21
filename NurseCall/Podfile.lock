@@ -8,6 +8,7 @@ PODS:
   - GCDWebServer/Core (3.5.2)
   - SAMKeychain (1.5.3)
   - SVProgressHUD (2.2.5)
+  - TYAlertController (1.2.0)
 
 DEPENDENCIES:
   - CocoaAsyncSocket
@@ -15,6 +16,7 @@ DEPENDENCIES:
   - GCDWebServer (~> 3.0)
   - SAMKeychain
   - SVProgressHUD
+  - TYAlertController
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
@@ -23,6 +25,7 @@ SPEC REPOS:
     - GCDWebServer
     - SAMKeychain
     - SVProgressHUD
+    - TYAlertController
 
 SPEC CHECKSUMS:
   CocoaAsyncSocket: eafaa68a7e0ec99ead0a7b35015e0bf25d2c8987
@@ -30,7 +33,8 @@ SPEC CHECKSUMS:
   GCDWebServer: ead88cd14596dd4eae4f5830b8877c87c8728990
   SAMKeychain: 483e1c9f32984d50ca961e26818a534283b4cd5c
   SVProgressHUD: 1428aafac632c1f86f62aa4243ec12008d7a51d6
+  TYAlertController: c121090edb0bea7426f987da94cdddd81eef4231
 
-PODFILE CHECKSUM: 9fd66d13573d536861cde0883278b693cca6abb8
+PODFILE CHECKSUM: 1e55f454fcd6044e25f68440ac059830f133ec91
 
 COCOAPODS: 1.6.0

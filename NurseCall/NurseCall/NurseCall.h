@@ -10,8 +10,11 @@
 #define NurseCall_h
 
 #import "FileTools.h"
+#import "UIView+frame.h"
 #import "UIDevice+DeviceType.h"          
 #import "UIDevice+IPAddresses.h"
 #import "UIBarButtonItem+init.h"
+
+
 
 #endif /* NurseCall_h */

@@ -19,6 +19,11 @@ enum SHDeviceManagerType: UInt {
 /// 设备
 class SHDevice: NSObject {
     
+    /// 自增ID
+    var id: UInt = 0
+    
+    var DeviceType: UInt8 = 0
+    
     /// 子网ID
     var subNetID: UInt8 = 0
     
@@ -36,4 +41,24 @@ class SHDevice: NSObject {
     
     /// 床位号
     var bedID: UInt = 0
+    
+    
+    override init() {
+        super.init()
+    }
+    
+    init(dictionary: [String: Any]) {
+        
+        super.init()
+        
+        setValuesForKeys(dictionary)
+    }
+    
+    override func setValue(_ value: Any?, forKey key: String) {
+        super.setValue(value, forKey: key)
+    }
+    
+    override func setValue(_ value: Any?, forUndefinedKey key: String) {
+        
+    }
 }
