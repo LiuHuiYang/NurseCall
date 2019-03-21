@@ -13,7 +13,7 @@ class SHViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
  
-       view.backgroundColor = UIColor(white: 241.0/255.0, alpha: 1.0)
+       view.backgroundColor = UIColor.white
         
     }
     

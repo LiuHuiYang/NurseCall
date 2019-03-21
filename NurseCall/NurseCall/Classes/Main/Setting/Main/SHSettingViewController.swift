@@ -8,27 +8,15 @@
 
 import UIKit
 
-enum SHSettingType: Int {
-    
-    case callManager
-    case responseManager
-    
-    case about
-}
 
 class SHSettingViewController: UITableViewController {
     
-    private lazy var settings = [
-        [0],
-        [0],
-        [0],
-        [0],
-        [0]
-    ]
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        tableView.backgroundColor = UIColor.white
         
         tableView.sectionHeaderHeight = 20
         tableView.sectionFooterHeight = 0
@@ -100,9 +88,26 @@ class SHSettingViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
-        let path = [indexPath.row, indexPath.section]
-        
-        print("不要点我 \(path)")
+        switch indexPath.section {
+            
+        case 0:
+            break
+            
+        case 1:
+            break
+            
+        case 2:
+            break
+            
+        case 3:
+            let aboutController = SHAboutViewController()
+            navigationController?.pushViewController(
+                aboutController, animated: true
+            )
+            
+        default:
+            break
+        }
     }
 }
 

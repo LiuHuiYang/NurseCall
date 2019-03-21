@@ -12,7 +12,7 @@ class SHServiceTools: NSObject {
     
     /// 单例处理工具
     static let shared = SHServiceTools()
-
+    
     /// 解决广播数所
     ///
     /// - Parameter scoketData: 广播数据
@@ -20,7 +20,7 @@ class SHServiceTools: NSObject {
         
         // 不是呼叫报务不工作
         if socketData.operatorCode != 0x03B2 &&
-           socketData.operatorCode != 0x03B3 {
+            socketData.operatorCode != 0x03B3 {
             return
         }
         
@@ -35,7 +35,7 @@ class SHServiceTools: NSObject {
         guard let serviceType = SHServiceType(rawValue: callType),
             let status = SHServiceStatus(rawValue: serviceStatus) else {
                 
-            return
+                return
         }
         
         print(status)
@@ -95,14 +95,13 @@ class SHServiceTools: NSObject {
             break
             
         case .feelColdService:        // 保暖的服务
-                break
-        
+            break
+            
         case .superEmergencyService:  // 超紧急服务(设置为叫医生服务)
             break
-        
+            
         default:
             break
         }
-        
     }
 }
