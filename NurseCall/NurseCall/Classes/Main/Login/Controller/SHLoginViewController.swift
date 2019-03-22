@@ -11,7 +11,7 @@ import SVProgressHUD
 import SAMKeychain
 
 // 临时使用的测试账号与密码
-let accountTest = "Admin"
+let accountTest = "admin"
 let passwordTest = "123456"
 
 class SHLoginViewController: SHViewController {

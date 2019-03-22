@@ -25,8 +25,8 @@ extension SHSQLiteManager {
         
         let sql =
             "update calldevices set " +
-            "subnetid = '\(device.subNetID )',  " +
-            "deviceid = '\(device.deviceID)',   " +
+            "subnetid = \(device.subNetID),   " +
+            "deviceid = \(device.deviceID),   " +
             "remark = '\(device.remark )' " +
             "where id = \(device.id);"
         
@@ -34,16 +34,24 @@ extension SHSQLiteManager {
     }
     
     /// 增加 device
-    func insertCallDevice(_ device: SHDevice) -> Bool {
+    ///
+    /// - Parameter device: device
+    /// - Returns: id
+    func insertCallDevice(_ device: SHDevice) -> UInt {
         
         let sql =
             "insert into calldevices " +
                 "(devicetype, subnetid, deviceid) " +
-                "values(\(device.DeviceType), " +
+                "values(\(device.deviceType), " +
                 "\(device.subNetID),   " +
-                "\(device.DeviceType));"
+                "\(device.deviceID));"
         
-        return executeSql(sql)
+        if executeSql(sql) {
+            
+            return getMaxIDFromCallDevice()
+        }
+        
+        return 0
     }
     
     /// 获取所有的 device
@@ -58,10 +66,26 @@ extension SHSQLiteManager {
         var devices = [SHDevice]()
         
         for dict in array {
-            
+         
             devices.append(SHDevice(dictionary: dict))
         }
         
         return devices
+    }
+    
+    
+    /// 获得最大的ID
+    ///
+    /// - Returns: id
+    func getMaxIDFromCallDevice() -> UInt {
+        
+        let sql = "select id from calldevices;"
+        
+        guard let maxID = selectProprty(sql).last?["id"] as? UInt else {
+            
+            return 0
+        }
+        
+        return maxID
     }
 }

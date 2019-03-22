@@ -16,11 +16,21 @@ class SHDeviceManagerCell: UICollectionViewCell {
         
         didSet {
             
-            subNetIDTextField.text = "\(device?.subNetID ?? 0)"
-            deviceIDTextField.text = "\(device?.deviceID ?? 0)"
+            guard let subNetID = device?.subNetID,
+                let deviceID = device?.deviceID,
+                subNetID != 0,
+                deviceID != 0 else {
+                
+                return
+            }
+            
+            subNetIDTextField.text = "\(subNetID)"
+            deviceIDTextField.text = "\(deviceID)"
             nameTextField.text = device?.remark
         }
     }
+    
+    var callBack: (() -> ())?
     
     
     /// 关闭按钮
@@ -41,6 +51,8 @@ class SHDeviceManagerCell: UICollectionViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
+        
+        isUserInteractionEnabled = false
         
         // 初始化
         subNetIDTextField.leftViewMode = .always
@@ -89,11 +101,13 @@ class SHDeviceManagerCell: UICollectionViewCell {
         guard let equipment = device,
             let subNetID = UInt8(subNetIDTextField.text ?? "0"),
             let deviceID = UInt8(deviceIDTextField.text ?? "0"),
-            let remark = nameTextField.text else {
-                
-            
+            let remark = nameTextField.text,
+            subNetID != 0,
+            deviceID != 0,
+            !remark.isEmpty else {
+          
             SVProgressHUD.showError(
-                withStatus: "Data cannot be empty"
+                withStatus: "invalid data"
             )
                 
             return
@@ -104,6 +118,10 @@ class SHDeviceManagerCell: UICollectionViewCell {
         equipment.remark = remark
         
         _ = SHSQLiteManager.shared.updateCallDevice(equipment)
+        
+        endEditing(true)
+        closeButton.isHidden = true
+        isUserInteractionEnabled = false
     }
     
     
@@ -111,7 +129,15 @@ class SHDeviceManagerCell: UICollectionViewCell {
     @IBAction func closeButtonClick() {
         
         // 删除
-        _ = SHSQLiteManager.shared.deleteCallDevice(device!)
+        if SHSQLiteManager.shared.deleteCallDevice(device!) {
+            
+            SVProgressHUD.showSuccess(
+                withStatus: "Successful device deletion"
+            )
+            
+            // 执行闭包
+            callBack?()
+        }
     }
     
     
@@ -124,7 +150,29 @@ extension SHDeviceManagerCell {
     
     @objc private func editDevice() {
     
+        isUserInteractionEnabled = true
         print("通知编辑")
         closeButton.isHidden = false
+    }
+}
+
+
+// MARK: - textField代理fdf
+extension SHDeviceManagerCell : UITextFieldDelegate {
+    
+    func textFieldDidBeginEditing(_ textField: UITextField) {
+        
+        if textField == subNetIDTextField {
+            
+            print("子网ID")
+            
+        } else if textField == deviceIDTextField {
+            
+            print("设备ID")
+            
+        } else if textField == nameTextField {
+            
+            print("名称")
+        }
     }
 }

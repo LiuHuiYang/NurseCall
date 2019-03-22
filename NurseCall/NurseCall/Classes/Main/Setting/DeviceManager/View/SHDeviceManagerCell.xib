@@ -22,7 +22,7 @@
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7dY-0c-uEP">
                         <rect key="frame" x="10" y="10" width="357" height="354"/>
                         <subviews>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" minimumFontSize="16" translatesAutoresizingMaskIntoConstraints="NO" id="Ojd-tI-iTY">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="1 ~ 255" minimumFontSize="16" translatesAutoresizingMaskIntoConstraints="NO" id="Ojd-tI-iTY">
                                 <rect key="frame" x="53.5" y="106.5" width="250" height="40"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
@@ -31,6 +31,9 @@
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                 <textInputTraits key="textInputTraits" keyboardAppearance="light" returnKeyType="next" textContentType="tel"/>
+                                <connections>
+                                    <outlet property="delegate" destination="gTV-IL-0wX" id="JFP-ds-sKd"/>
+                                </connections>
                             </textField>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oGL-14-i3h" userLabel="line1">
                                 <rect key="frame" x="53.5" y="147.5" width="250" height="1"/>
@@ -40,12 +43,15 @@
                                 </constraints>
                                 <viewLayoutGuide key="safeArea" id="g3K-76-oDp"/>
                             </view>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" minimumFontSize="16" translatesAutoresizingMaskIntoConstraints="NO" id="oHa-dv-Jsv">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="1 ~ 255" minimumFontSize="16" translatesAutoresizingMaskIntoConstraints="NO" id="oHa-dv-Jsv">
                                 <rect key="frame" x="53.5" y="163.5" width="250" height="40"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                 <textInputTraits key="textInputTraits" keyboardAppearance="light" returnKeyType="next" textContentType="tel"/>
+                                <connections>
+                                    <outlet property="delegate" destination="gTV-IL-0wX" id="toX-hL-78Z"/>
+                                </connections>
                             </textField>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wRT-CO-lvb" userLabel="line2">
                                 <rect key="frame" x="53.5" y="204.5" width="250" height="1"/>
@@ -90,13 +96,24 @@
                                     <action selector="saveButtonClick" destination="gTV-IL-0wX" eventType="touchUpInside" id="IMX-2R-6fU"/>
                                 </connections>
                             </button>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" minimumFontSize="16" translatesAutoresizingMaskIntoConstraints="NO" id="FI5-Rn-T5I">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="character" minimumFontSize="16" translatesAutoresizingMaskIntoConstraints="NO" id="FI5-Rn-T5I">
                                 <rect key="frame" x="53.5" y="220.5" width="250" height="40"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                 <textInputTraits key="textInputTraits" keyboardAppearance="light" returnKeyType="next" textContentType="tel"/>
+                                <connections>
+                                    <outlet property="delegate" destination="gTV-IL-0wX" id="WWS-4F-Eqd"/>
+                                </connections>
                             </textField>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Cn0-SU-vsX" userLabel="line3">
+                                <rect key="frame" x="53.5" y="261.5" width="250" height="1"/>
+                                <color key="backgroundColor" red="0.79607843140000001" green="0.79607843140000001" blue="0.79607843140000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="1" id="xjo-TE-xny"/>
+                                </constraints>
+                                <viewLayoutGuide key="safeArea" id="MSx-xO-ydy"/>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" red="0.94509803921568625" green="0.94509803921568625" blue="0.94509803921568625" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -117,10 +134,14 @@
                             <constraint firstItem="Ojd-tI-iTY" firstAttribute="top" secondItem="OI5-db-igq" secondAttribute="bottom" constant="15" id="Jsf-10-faM"/>
                             <constraint firstItem="FI5-Rn-T5I" firstAttribute="top" secondItem="wRT-CO-lvb" secondAttribute="bottom" constant="15" id="PTv-Ch-ls6"/>
                             <constraint firstItem="LmA-T3-VDg" firstAttribute="top" secondItem="7dY-0c-uEP" secondAttribute="top" constant="10" id="ZwO-II-x3M"/>
+                            <constraint firstItem="Cn0-SU-vsX" firstAttribute="height" secondItem="oGL-14-i3h" secondAttribute="height" id="d6z-hz-a1D"/>
+                            <constraint firstItem="Cn0-SU-vsX" firstAttribute="top" secondItem="FI5-Rn-T5I" secondAttribute="bottom" constant="1" id="faQ-1d-b5y"/>
+                            <constraint firstItem="Cn0-SU-vsX" firstAttribute="centerX" secondItem="oGL-14-i3h" secondAttribute="centerX" id="gPN-ad-hwN"/>
                             <constraint firstItem="FI5-Rn-T5I" firstAttribute="width" secondItem="Ojd-tI-iTY" secondAttribute="width" id="iWi-Zu-eQb"/>
                             <constraint firstItem="oGL-14-i3h" firstAttribute="centerX" secondItem="Ojd-tI-iTY" secondAttribute="centerX" id="jTy-V5-tpI"/>
                             <constraint firstItem="VfV-vq-O4b" firstAttribute="height" secondItem="Ojd-tI-iTY" secondAttribute="height" id="kTI-iT-LI4"/>
                             <constraint firstItem="oHa-dv-Jsv" firstAttribute="height" secondItem="Ojd-tI-iTY" secondAttribute="height" id="leo-KM-Xkx"/>
+                            <constraint firstItem="Cn0-SU-vsX" firstAttribute="width" secondItem="oGL-14-i3h" secondAttribute="width" id="mhQ-jQ-hg1"/>
                             <constraint firstItem="FI5-Rn-T5I" firstAttribute="centerX" secondItem="Ojd-tI-iTY" secondAttribute="centerX" id="nOt-z3-8gg"/>
                             <constraint firstItem="FI5-Rn-T5I" firstAttribute="height" secondItem="Ojd-tI-iTY" secondAttribute="height" id="pPZ-er-ufB"/>
                             <constraint firstItem="oHa-dv-Jsv" firstAttribute="centerX" secondItem="Ojd-tI-iTY" secondAttribute="centerX" id="rXx-wp-iVB"/>

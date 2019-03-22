@@ -27,8 +27,10 @@ class SHCallDeviceSettingViewController: SHViewController {
         let device = SHDevice()
         devices.append(device)
         
+        device.id = SHSQLiteManager.shared.insertCallDevice(device)
+        
         // 添加到数据库中
-        if SHSQLiteManager.shared.insertCallDevice(device) {
+        if device.id != 0 {
          
             listView.reloadData()
             
@@ -45,6 +47,10 @@ class SHCallDeviceSettingViewController: SHViewController {
     
     /// 编辑点击
     @IBAction func editButtonClick() {
+        
+        if devices.isEmpty {
+            return
+        }
         
         NotificationCenter.default.post(
             name: Notification.Name(editDeviceNotification),
@@ -71,6 +77,13 @@ extension SHCallDeviceSettingViewController: UICollectionViewDataSource {
             ) as! SHDeviceManagerCell
         
         cell.device = devices[indexPath.item]
+        
+        cell.callBack = {
+            
+            print("执行回调")
+            self.devices = SHSQLiteManager.shared.getCallDevices()
+            self.listView.reloadData()
+        }
         
         return cell
     }

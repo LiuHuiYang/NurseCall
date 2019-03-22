@@ -12,17 +12,17 @@ import UIKit
 
 enum SHDeviceManagerType: UInt {
     
-    case call       // 呼叫设备
-    case response   // 响应设备
+    case call       = 1001 // 呼叫设备
+    case response          // 响应设备
 }
 
-/// 设备
-class SHDevice: NSObject {
+/// 设备 kvc 使用了 runtime 所以要加上 objcMembers
+@objcMembers class SHDevice: NSObject {
     
     /// 自增ID
     var id: UInt = 0
     
-    var DeviceType: UInt8 = 0
+    var deviceType: UInt = 0
     
     /// 子网ID
     var subNetID: UInt8 = 0
@@ -50,15 +50,20 @@ class SHDevice: NSObject {
     init(dictionary: [String: Any]) {
         
         super.init()
-        
         setValuesForKeys(dictionary)
     }
     
     override func setValue(_ value: Any?, forKey key: String) {
+//        print("设置: \(key) - \(value ?? "")")
         super.setValue(value, forKey: key)
     }
     
     override func setValue(_ value: Any?, forUndefinedKey key: String) {
         
+//        if key == "ID" {
+        
+//          id = UInt(value as? String ?? "0") ?? 0
+//            id = value as? UInt ?? 0
+//        }
     }
 }
