@@ -109,11 +109,11 @@ class SHSettingViewController: UITableViewController {
                 return
             }
             
+            UserDefaults.standard.set(false, forKey: isLoginKey)
+            UserDefaults.standard.synchronize()
             
-            
-            print("密码正确")
-            // 发送通知 切换子控制器
-            
+            UIApplication.shared.keyWindow?.rootViewController =
+                SHLoginViewController()
         }
         
         alertView.add(sureAction)
