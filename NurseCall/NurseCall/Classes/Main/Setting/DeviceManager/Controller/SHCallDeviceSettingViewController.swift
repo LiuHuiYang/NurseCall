@@ -13,21 +13,40 @@ private let deviceSettingCellReuseIdentifier =
     "SHDeviceManagerCell"
 
 class SHCallDeviceSettingViewController: SHViewController {
-
+    
+    init(deviceType: SHDeviceManagerType) {
+        super.init(nibName: nil, bundle: nil)
+        
+        self.deviceType = deviceType
+        
+        self.devices =
+            SHSQLiteManager.shared.getCallDevices(
+                deviceType: deviceType
+        )
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
     @IBOutlet weak var listView: UICollectionView!
     
+    /// 设备管理类型
+    private var deviceType = SHDeviceManagerType.call
+    
     /// 所有的呼叫设备
-    private lazy var devices: [SHDevice] =
-        SHSQLiteManager.shared.getCallDevices()
+    private lazy var devices = [SHDevice]()
     
    
     /// 添加设备点击
     @IBAction func addDeviceButtonClick() {
         
         let device = SHDevice()
+        device.deviceType = self.deviceType
         devices.append(device)
         
         device.id = SHSQLiteManager.shared.insertCallDevice(device)
+        
         
         // 添加到数据库中
         if device.id != 0 {
@@ -81,7 +100,10 @@ extension SHCallDeviceSettingViewController: UICollectionViewDataSource {
         cell.callBack = {
             
             print("执行回调")
-            self.devices = SHSQLiteManager.shared.getCallDevices()
+            self.devices = SHSQLiteManager.shared.getCallDevices(
+                deviceType: self.deviceType
+            )
+            
             self.listView.reloadData()
         }
         
@@ -117,7 +139,9 @@ extension SHCallDeviceSettingViewController {
         
         let flowLayout = listView.collectionViewLayout as! UICollectionViewFlowLayout
         
-        flowLayout.itemSize = CGSize(width: itemWidth, height: itemWidth)
+        flowLayout.itemSize =
+            CGSize(width: itemWidth,
+                   height: 7 * tabBarHeight)
         
         flowLayout.minimumLineSpacing = itemMarign
         flowLayout.minimumInteritemSpacing = itemMarign

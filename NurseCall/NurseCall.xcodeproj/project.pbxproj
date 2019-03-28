@@ -120,6 +120,7 @@
 		04A4F143223B841E004E740D /* UIBarButtonItem+init.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIBarButtonItem+init.m"; sourceTree = "<group>"; };
 		04A4F148223B862C004E740D /* SHLoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SHLoginViewController.swift; sourceTree = "<group>"; };
 		04A4F149223B862C004E740D /* SHLoginViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SHLoginViewController.xib; sourceTree = "<group>"; };
+		04BC0AB12244DB4F00DB852F /* iAd.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = iAd.framework; path = System/Library/Frameworks/iAd.framework; sourceTree = SDKROOT; };
 		04BFCA27223B36F90039461D /* NurseCall.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NurseCall.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		04BFCA2A223B36F90039461D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		04BFCA31223B36FA0039461D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -519,6 +520,7 @@
 		3DD969F46611F60B9749C1B3 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				04BC0AB12244DB4F00DB852F /* iAd.framework */,
 				2EC9BB3D8DE42F0F4C5449F5 /* Pods_NurseCall.framework */,
 			);
 			name = Frameworks;

@@ -24,10 +24,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 SHMainViewController() :
                 SHNavigationController(rootViewController:
                     SHLoginViewController()
-            )
+        )
         
         window?.makeKeyAndVisible()
         
+        // 程序启动，打开数据库
         _ = SHSQLiteManager.shared
         
         // 设置样式

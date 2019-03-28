@@ -1,5 +1,5 @@
 -- 创建所有的表格
--- 8.创建HVACInZoneIRCommands表格
+--  创建 呼叫设备 表格
 CREATE TABLE IF NOT EXISTS CALLDEVICES (
 
     id INTEGER PRIMARY KEY AUTOINCREMENT ,
@@ -8,3 +8,4 @@ CREATE TABLE IF NOT EXISTS CALLDEVICES (
     deviceID  INTEGER NOT NULL  DEFAULT 0,
     remark   TEXT NOT NULL DEFAULT 'call device'
 );
+

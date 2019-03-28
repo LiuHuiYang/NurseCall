@@ -16,6 +16,11 @@ class SHDeviceManagerCell: UICollectionViewCell {
         
         didSet {
             
+            iconView.image =
+                device?.deviceType == .call ?
+                    UIImage(named: "callDevice_setting") :
+                    UIImage(named: "respondDevice_setting")
+            
             guard let subNetID = device?.subNetID,
                 let deviceID = device?.deviceID,
                 subNetID != 0,

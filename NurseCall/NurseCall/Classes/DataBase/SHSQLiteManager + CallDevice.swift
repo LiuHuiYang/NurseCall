@@ -42,7 +42,7 @@ extension SHSQLiteManager {
         let sql =
             "insert into calldevices " +
                 "(devicetype, subnetid, deviceid) " +
-                "values(\(device.deviceType), " +
+                "values(\(device.deviceType.rawValue), " +
                 "\(device.subNetID),   " +
                 "\(device.deviceID));"
         
@@ -55,11 +55,12 @@ extension SHSQLiteManager {
     }
     
     /// 获取所有的 device
-    func getCallDevices() -> [SHDevice] {
+    func getCallDevices(deviceType: SHDeviceManagerType) -> [SHDevice] {
         
         let sql =
             "select id, devicetype, subnetid, deviceid, remark " +
-            "from calldevices order by id;"
+            "from calldevices where " +
+            "devicetype = \(deviceType.rawValue) order by id;"
         
         let array = selectProprty(sql)
         

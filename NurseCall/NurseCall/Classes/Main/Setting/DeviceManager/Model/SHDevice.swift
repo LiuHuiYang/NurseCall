@@ -22,7 +22,7 @@ enum SHDeviceManagerType: UInt {
     /// 自增ID
     var id: UInt = 0
     
-    var deviceType: UInt = 0
+    var deviceType: SHDeviceManagerType = .call
     
     /// 子网ID
     var subNetID: UInt8 = 0
@@ -65,5 +65,12 @@ enum SHDeviceManagerType: UInt {
 //          id = UInt(value as? String ?? "0") ?? 0
 //            id = value as? UInt ?? 0
 //        }
+        
+        if key == "deviceType" {
+            deviceType =
+                SHDeviceManagerType(
+                    rawValue: value as? UInt ?? 0
+                ) ?? .call
+        }
     }
 }
