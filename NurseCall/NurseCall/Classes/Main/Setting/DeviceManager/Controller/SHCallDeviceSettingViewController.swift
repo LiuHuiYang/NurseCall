@@ -53,13 +53,11 @@ class SHCallDeviceSettingViewController: SHViewController {
          
             listView.reloadData()
             
-//            listView.scrollToItem(
-//                at: IndexPath(item: devices.count, section: 0),
-//                at: UICollectionView.ScrollPosition.bottom,
-//                animated: true
-//            )
-            
-            
+            listView.scrollToItem(
+                at: IndexPath(item: devices.count - 1, section: 0),
+                at: UICollectionView.ScrollPosition.bottom,
+                animated: true
+            )
         }
     }
     
