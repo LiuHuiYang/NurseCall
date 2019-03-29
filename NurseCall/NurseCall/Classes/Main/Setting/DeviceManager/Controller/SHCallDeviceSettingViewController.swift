@@ -31,6 +31,7 @@ class SHCallDeviceSettingViewController: SHViewController {
     
     @IBOutlet weak var listView: UICollectionView!
     
+    
     /// 设备管理类型
     private var deviceType = SHDeviceManagerType.call
     
@@ -65,12 +66,14 @@ class SHCallDeviceSettingViewController: SHViewController {
     /// 编辑点击
     @IBAction func editButtonClick() {
         
+        printLog(message: isEditing)
+        
         if devices.isEmpty {
             return
         }
         
         NotificationCenter.default.post(
-            name: Notification.Name(editDeviceNotification),
+            name: Notification.Name(editDeviceStartNotification),
             object: nil
         )
     }
@@ -103,6 +106,9 @@ extension SHCallDeviceSettingViewController: UICollectionViewDataSource {
             )
             
             self.listView.reloadData()
+            
+            // 重新布局
+            
         }
         
         return cell

@@ -606,13 +606,16 @@
 				TargetAttributes = {
 					04BFCA26223B36F90039461D = {
 						CreatedOnToolsVersion = 10.1;
+						LastSwiftMigration = 1020;
 					};
 					04BFCA3A223B36FB0039461D = {
 						CreatedOnToolsVersion = 10.1;
+						LastSwiftMigration = 1020;
 						TestTargetID = 04BFCA26223B36F90039461D;
 					};
 					04BFCA45223B36FB0039461D = {
 						CreatedOnToolsVersion = 10.1;
+						LastSwiftMigration = 1020;
 						TestTargetID = 04BFCA26223B36F90039461D;
 					};
 				};
@@ -944,7 +947,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.smarthome.NurseCall;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "$(SRCROOT)/NurseCall/NurseCall.h";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
@@ -965,7 +968,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.smarthome.NurseCall;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "$(SRCROOT)/NurseCall/NurseCall.h";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
@@ -985,7 +988,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.smarthome.NurseCallTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/NurseCall.app/NurseCall";
 			};
@@ -1006,7 +1009,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.smarthome.NurseCallTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/NurseCall.app/NurseCall";
 			};
@@ -1026,7 +1029,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.smarthome.NurseCallUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_TARGET_NAME = NurseCall;
 			};
@@ -1046,7 +1049,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.smarthome.NurseCallUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_TARGET_NAME = NurseCall;
 			};

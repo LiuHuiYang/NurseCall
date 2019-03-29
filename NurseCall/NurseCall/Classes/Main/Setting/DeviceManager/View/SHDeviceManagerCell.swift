@@ -38,6 +38,9 @@ class SHDeviceManagerCell: UICollectionViewCell {
     var callBack: (() -> ())?
     
     
+    /// 保存按钮
+    @IBOutlet weak var saveButton: UIButton!
+    
     /// 关闭按钮
     @IBOutlet weak var closeButton: UIButton!
     
@@ -89,12 +92,13 @@ class SHDeviceManagerCell: UICollectionViewCell {
         nameTextField.tintColor = tabBarFontNormalColor
         
         closeButton.isHidden = true
+        saveButton.isHidden = true
         
         // 监听通知
         NotificationCenter.default.addObserver(
             self,
             selector: #selector(editDevice),
-            name: NSNotification.Name(editDeviceNotification),
+            name: NSNotification.Name(editDeviceStartNotification),
             object: nil
         )
     }
@@ -126,7 +130,11 @@ class SHDeviceManagerCell: UICollectionViewCell {
         
         endEditing(true)
         closeButton.isHidden = true
+        saveButton.isHidden = true
         isUserInteractionEnabled = false
+        
+        // 执行闭包
+        callBack?()
     }
     
     
@@ -142,6 +150,7 @@ class SHDeviceManagerCell: UICollectionViewCell {
             
             // 执行闭包
             callBack?()
+            
         }
     }
     
@@ -156,8 +165,9 @@ extension SHDeviceManagerCell {
     @objc private func editDevice() {
     
         isUserInteractionEnabled = true
-        print("通知编辑")
         closeButton.isHidden = false
+        saveButton.isHidden = false
+    
     }
 }
 

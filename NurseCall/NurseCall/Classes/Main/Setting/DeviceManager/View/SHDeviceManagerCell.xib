@@ -170,6 +170,7 @@
                 <outlet property="deviceIDTextField" destination="oHa-dv-Jsv" id="4iu-HN-gUT"/>
                 <outlet property="iconView" destination="OI5-db-igq" id="m0X-S5-Rfx"/>
                 <outlet property="nameTextField" destination="FI5-Rn-T5I" id="Ziw-4g-0rb"/>
+                <outlet property="saveButton" destination="VfV-vq-O4b" id="So3-nh-p17"/>
                 <outlet property="subNetIDTextField" destination="Ojd-tI-iTY" id="D3F-Of-SyM"/>
             </connections>
             <point key="canvasLocation" x="239.19999999999999" y="129.53523238380811"/>
