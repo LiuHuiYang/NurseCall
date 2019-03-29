@@ -31,6 +31,8 @@ class SHCallDeviceSettingViewController: SHViewController {
     
     @IBOutlet weak var listView: UICollectionView!
     
+    /// 编辑设备
+    private var editDevice = false
     
     /// 设备管理类型
     private var deviceType = SHDeviceManagerType.call
@@ -66,16 +68,28 @@ class SHCallDeviceSettingViewController: SHViewController {
     /// 编辑点击
     @IBAction func editButtonClick() {
         
-        printLog(message: isEditing)
-        
         if devices.isEmpty {
             return
         }
+         
+        editDevice = !editDevice
+        viewDidLayoutSubviews()
         
-        NotificationCenter.default.post(
-            name: Notification.Name(editDeviceStartNotification),
-            object: nil
-        )
+        if editDevice {
+        
+            NotificationCenter.default.post(
+                name: Notification.Name(editDeviceStartNotification),
+                object: nil
+            )
+            
+        
+        } else {
+        
+            NotificationCenter.default.post(
+                name: Notification.Name(editDeviceEndNotification),
+                object: nil
+            )
+        }
     }
 }
 
@@ -108,7 +122,8 @@ extension SHCallDeviceSettingViewController: UICollectionViewDataSource {
             self.listView.reloadData()
             
             // 重新布局
-            
+            self.editDevice = false
+            self.viewDidLayoutSubviews()
         }
         
         return cell
@@ -122,7 +137,10 @@ extension SHCallDeviceSettingViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        navigationItem.title = "Call equipment"
+        navigationItem.title =
+            deviceType == .call ?
+                "Call equipment" :
+                "Response equipment"
         
         listView.register(UINib(nibName:
             deviceSettingCellReuseIdentifier,
@@ -136,18 +154,28 @@ extension SHCallDeviceSettingViewController {
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
         
-        let itemMarign: CGFloat = 1
+        let itemMarign: CGFloat = statusBarHeight
         let totalCols = 1
         
-        let itemWidth = (listView.bounds.width - CGFloat(totalCols) * itemMarign) / CGFloat(totalCols)
+        let itemWidth =
+            (listView.bounds.width - CGFloat(totalCols) * itemMarign) / CGFloat(totalCols
+        )
         
-        let flowLayout = listView.collectionViewLayout as! UICollectionViewFlowLayout
+        print("editDevice = \(editDevice)")
+        let itemHeight = 7 * tabBarHeight -
+            (editDevice ? 0 : tabBarHeight)
         
-        flowLayout.itemSize =
-            CGSize(width: itemWidth,
-                   height: 7 * tabBarHeight)
+        let flowLayout =
+            listView.collectionViewLayout as!
+            UICollectionViewFlowLayout
         
         flowLayout.minimumLineSpacing = itemMarign
         flowLayout.minimumInteritemSpacing = itemMarign
+        
+        flowLayout.itemSize =
+            CGSize(width: itemWidth,
+                   height: itemHeight
+        )
+        
     }
 }

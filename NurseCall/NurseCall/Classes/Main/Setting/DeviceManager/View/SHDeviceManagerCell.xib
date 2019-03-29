@@ -23,7 +23,7 @@
                         <rect key="frame" x="10" y="10" width="357" height="354"/>
                         <subviews>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="1 ~ 255" minimumFontSize="16" translatesAutoresizingMaskIntoConstraints="NO" id="Ojd-tI-iTY">
-                                <rect key="frame" x="53.5" y="106.5" width="250" height="40"/>
+                                <rect key="frame" x="53.5" y="94" width="250" height="40"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="DqM-J4-hpN"/>
@@ -36,7 +36,7 @@
                                 </connections>
                             </textField>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oGL-14-i3h" userLabel="line1">
-                                <rect key="frame" x="53.5" y="147.5" width="250" height="1"/>
+                                <rect key="frame" x="53.5" y="135" width="250" height="1"/>
                                 <color key="backgroundColor" red="0.79607843140000001" green="0.79607843140000001" blue="0.79607843140000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="1" id="n3I-nE-j4X"/>
@@ -44,7 +44,7 @@
                                 <viewLayoutGuide key="safeArea" id="g3K-76-oDp"/>
                             </view>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="1 ~ 255" minimumFontSize="16" translatesAutoresizingMaskIntoConstraints="NO" id="oHa-dv-Jsv">
-                                <rect key="frame" x="53.5" y="163.5" width="250" height="40"/>
+                                <rect key="frame" x="53.5" y="151" width="250" height="40"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
@@ -54,7 +54,7 @@
                                 </connections>
                             </textField>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wRT-CO-lvb" userLabel="line2">
-                                <rect key="frame" x="53.5" y="204.5" width="250" height="1"/>
+                                <rect key="frame" x="53.5" y="192" width="250" height="1"/>
                                 <color key="backgroundColor" red="0.79607843140000001" green="0.79607843140000001" blue="0.79607843140000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="1" id="JVB-lW-zmf"/>
@@ -62,9 +62,12 @@
                                 <viewLayoutGuide key="safeArea" id="4jq-83-fDo"/>
                             </view>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="callDevice_setting" translatesAutoresizingMaskIntoConstraints="NO" id="OI5-db-igq">
-                                <rect key="frame" x="119" y="20" width="119" height="71.5"/>
+                                <rect key="frame" x="119" y="15" width="119" height="64"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="64" id="Jhw-UU-TlV"/>
+                                </constraints>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LmA-T3-VDg">
                                 <rect key="frame" x="315" y="10" width="32" height="32"/>
@@ -81,7 +84,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VfV-vq-O4b">
-                                <rect key="frame" x="53.5" y="275.5" width="250" height="40"/>
+                                <rect key="frame" x="53.5" y="263" width="250" height="40"/>
                                 <color key="backgroundColor" red="0.19215686269999999" green="0.59607843140000005" blue="0.94901960780000005" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="16"/>
                                 <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -97,7 +100,7 @@
                                 </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="character" minimumFontSize="16" translatesAutoresizingMaskIntoConstraints="NO" id="FI5-Rn-T5I">
-                                <rect key="frame" x="53.5" y="220.5" width="250" height="40"/>
+                                <rect key="frame" x="53.5" y="208" width="250" height="40"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
@@ -107,7 +110,7 @@
                                 </connections>
                             </textField>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Cn0-SU-vsX" userLabel="line3">
-                                <rect key="frame" x="53.5" y="261.5" width="250" height="1"/>
+                                <rect key="frame" x="53.5" y="249" width="250" height="1"/>
                                 <color key="backgroundColor" red="0.79607843140000001" green="0.79607843140000001" blue="0.79607843140000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="1" id="xjo-TE-xny"/>
@@ -117,7 +120,6 @@
                         </subviews>
                         <color key="backgroundColor" red="0.94509803921568625" green="0.94509803921568625" blue="0.94509803921568625" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="OI5-db-igq" firstAttribute="height" secondItem="7dY-0c-uEP" secondAttribute="width" multiplier="1/5" id="0ea-Cp-jVr"/>
                             <constraint firstItem="OI5-db-igq" firstAttribute="width" secondItem="7dY-0c-uEP" secondAttribute="width" multiplier="1/3" id="1KV-44-V5z"/>
                             <constraint firstItem="oHa-dv-Jsv" firstAttribute="width" secondItem="Ojd-tI-iTY" secondAttribute="width" id="1z5-qO-faW"/>
                             <constraint firstItem="VfV-vq-O4b" firstAttribute="centerX" secondItem="Ojd-tI-iTY" secondAttribute="centerX" id="38y-YQ-IMF"/>
@@ -128,7 +130,7 @@
                             <constraint firstItem="Ojd-tI-iTY" firstAttribute="width" secondItem="7dY-0c-uEP" secondAttribute="width" multiplier="0.7" id="9bM-E9-msg"/>
                             <constraint firstItem="VfV-vq-O4b" firstAttribute="width" secondItem="Ojd-tI-iTY" secondAttribute="width" id="AO9-Za-3D1"/>
                             <constraint firstItem="wRT-CO-lvb" firstAttribute="centerX" secondItem="oGL-14-i3h" secondAttribute="centerX" id="AVG-B8-r6f"/>
-                            <constraint firstItem="OI5-db-igq" firstAttribute="top" secondItem="7dY-0c-uEP" secondAttribute="top" constant="20" id="C5U-j3-xn4"/>
+                            <constraint firstItem="OI5-db-igq" firstAttribute="top" secondItem="7dY-0c-uEP" secondAttribute="top" constant="15" id="C5U-j3-xn4"/>
                             <constraint firstItem="Ojd-tI-iTY" firstAttribute="centerX" secondItem="7dY-0c-uEP" secondAttribute="centerX" id="EC1-6B-x4M"/>
                             <constraint firstItem="oHa-dv-Jsv" firstAttribute="top" secondItem="oGL-14-i3h" secondAttribute="bottom" constant="15" id="EVW-VE-ciA"/>
                             <constraint firstItem="Ojd-tI-iTY" firstAttribute="top" secondItem="OI5-db-igq" secondAttribute="bottom" constant="15" id="Jsf-10-faM"/>

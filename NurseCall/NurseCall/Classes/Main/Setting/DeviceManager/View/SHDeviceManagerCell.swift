@@ -35,6 +35,7 @@ class SHDeviceManagerCell: UICollectionViewCell {
         }
     }
     
+    /// 回调
     var callBack: (() -> ())?
     
     
@@ -97,8 +98,16 @@ class SHDeviceManagerCell: UICollectionViewCell {
         // 监听通知
         NotificationCenter.default.addObserver(
             self,
-            selector: #selector(editDevice),
+            selector: #selector(startEditDevice),
             name: NSNotification.Name(editDeviceStartNotification),
+            object: nil
+        )
+        
+        // 监听通知
+        NotificationCenter.default.addObserver(
+            self,
+            selector: #selector(finishEditDevice),
+            name: NSNotification.Name(editDeviceEndNotification),
             object: nil
         )
     }
@@ -127,11 +136,11 @@ class SHDeviceManagerCell: UICollectionViewCell {
         equipment.remark = remark
         
         _ = SHSQLiteManager.shared.updateCallDevice(equipment)
-        
-        endEditing(true)
-        closeButton.isHidden = true
-        saveButton.isHidden = true
-        isUserInteractionEnabled = false
+          
+        NotificationCenter.default.post(
+            name: Notification.Name(editDeviceEndNotification),
+            object: nil
+        )
         
         // 执行闭包
         callBack?()
@@ -160,14 +169,25 @@ class SHDeviceManagerCell: UICollectionViewCell {
     }
 }
 
+
+// MARK: - 编辑
 extension SHDeviceManagerCell {
     
-    @objc private func editDevice() {
+    @objc private func startEditDevice() {
     
         isUserInteractionEnabled = true
         closeButton.isHidden = false
         saveButton.isHidden = false
     
+    }
+    
+    @objc private func finishEditDevice() {
+        
+        endEditing(true)
+        
+        isUserInteractionEnabled = false
+        closeButton.isHidden = true
+        saveButton.isHidden = true
     }
 }
 
