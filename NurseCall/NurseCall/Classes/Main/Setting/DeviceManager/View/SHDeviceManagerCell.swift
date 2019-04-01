@@ -16,28 +16,39 @@ class SHDeviceManagerCell: UICollectionViewCell {
         
         didSet {
             
+            // 去除重用机制的影响
+            iconView.image = nil
+            subNetIDTextField.text = nil
+            deviceIDTextField.text = nil
+            nameTextField.text = nil
+            
             iconView.image =
                 device?.deviceType == .call ?
                     UIImage(named: "callDevice_setting") :
                     UIImage(named: "respondDevice_setting")
             
-            guard let subNetID = device?.subNetID,
+            
+            if let subNetID = device?.subNetID,
                 let deviceID = device?.deviceID,
                 subNetID != 0,
-                deviceID != 0 else {
-                
-                return
+                deviceID != 0 {
+                    
+                subNetIDTextField.text = "\(subNetID)"
+                deviceIDTextField.text = "\(deviceID)"
+                nameTextField.text = device?.remark
             }
             
-            subNetIDTextField.text = "\(subNetID)"
-            deviceIDTextField.text = "\(deviceID)"
-            nameTextField.text = device?.remark
         }
     }
     
     /// 回调
     var callBack: (() -> ())?
     
+    /// 默认高度
+    static var itemHeight: CGFloat {
+        
+        return 7 * tabBarHeight
+    }
     
     /// 保存按钮
     @IBOutlet weak var saveButton: UIButton!
@@ -57,6 +68,8 @@ class SHDeviceManagerCell: UICollectionViewCell {
     
     /// 名称
     @IBOutlet weak var nameTextField: UITextField!
+    
+    
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -123,27 +136,29 @@ class SHDeviceManagerCell: UICollectionViewCell {
             subNetID != 0,
             deviceID != 0,
             !remark.isEmpty else {
-          
-            SVProgressHUD.showError(
-                withStatus: "invalid data"
-            )
                 
-            return
+                SVProgressHUD.showError(
+                    withStatus: "invalid data"
+                )
+                
+                return
         }
         
         equipment.subNetID = subNetID
         equipment.deviceID = deviceID
         equipment.remark = remark
         
-        _ = SHSQLiteManager.shared.updateCallDevice(equipment)
-          
-        NotificationCenter.default.post(
-            name: Notification.Name(editDeviceEndNotification),
-            object: nil
-        )
+        if SHSQLiteManager.shared.updateCallDevice(equipment) {
+            
+            NotificationCenter.default.post(
+                name: Notification.Name(editDeviceEndNotification),
+                object: nil
+            )
+            
+            // 执行闭包
+            callBack?()
+        }
         
-        // 执行闭包
-        callBack?()
     }
     
     
@@ -157,9 +172,13 @@ class SHDeviceManagerCell: UICollectionViewCell {
                 withStatus: "Successful device deletion"
             )
             
+            NotificationCenter.default.post(
+                name: Notification.Name(editDeviceEndNotification),
+                object: nil
+            )
+            
             // 执行闭包
             callBack?()
-            
         }
     }
     
@@ -174,11 +193,11 @@ class SHDeviceManagerCell: UICollectionViewCell {
 extension SHDeviceManagerCell {
     
     @objc private func startEditDevice() {
-    
+        
         isUserInteractionEnabled = true
         closeButton.isHidden = false
         saveButton.isHidden = false
-    
+        
     }
     
     @objc private func finishEditDevice() {

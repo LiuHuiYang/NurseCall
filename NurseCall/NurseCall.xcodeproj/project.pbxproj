@@ -40,7 +40,6 @@
 		04A4F131223B4748004E740D /* SHNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A4F12E223B4747004E740D /* SHNavigationController.swift */; };
 		04A4F132223B4748004E740D /* SHMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A4F12F223B4747004E740D /* SHMainViewController.swift */; };
 		04A4F134223B4763004E740D /* SHNurseStationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A4F133223B4763004E740D /* SHNurseStationViewController.swift */; };
-		04A4F138223B4783004E740D /* SHSickRoomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A4F137223B4783004E740D /* SHSickRoomViewController.swift */; };
 		04A4F13A223B4791004E740D /* SHUrgentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A4F139223B4791004E740D /* SHUrgentViewController.swift */; };
 		04A4F13C223B59A9004E740D /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A4F13B223B59A9004E740D /* Colors.swift */; };
 		04A4F144223B841E004E740D /* UIButton+init.m in Sources */ = {isa = PBXBuildFile; fileRef = 04A4F140223B841E004E740D /* UIButton+init.m */; };
@@ -52,6 +51,8 @@
 		04BFCA35223B36FA0039461D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04BFCA33223B36FA0039461D /* LaunchScreen.storyboard */; };
 		04BFCA40223B36FB0039461D /* NurseCallTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04BFCA3F223B36FB0039461D /* NurseCallTests.swift */; };
 		04BFCA4B223B36FB0039461D /* NurseCallUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04BFCA4A223B36FB0039461D /* NurseCallUITests.swift */; };
+		04D6D5C1224DF20A000BF0F4 /* SHSickRoomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D6D5BF224DF20A000BF0F4 /* SHSickRoomViewController.swift */; };
+		04D6D5C2224DF20A000BF0F4 /* SHSickRoomViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04D6D5C0224DF20A000BF0F4 /* SHSickRoomViewController.xib */; };
 		FB2BD6E93D299A03D3CD94E2 /* Pods_NurseCall.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2EC9BB3D8DE42F0F4C5449F5 /* Pods_NurseCall.framework */; };
 /* End PBXBuildFile section */
 
@@ -111,7 +112,6 @@
 		04A4F12E223B4747004E740D /* SHNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SHNavigationController.swift; sourceTree = "<group>"; };
 		04A4F12F223B4747004E740D /* SHMainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SHMainViewController.swift; sourceTree = "<group>"; };
 		04A4F133223B4763004E740D /* SHNurseStationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SHNurseStationViewController.swift; sourceTree = "<group>"; };
-		04A4F137223B4783004E740D /* SHSickRoomViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SHSickRoomViewController.swift; sourceTree = "<group>"; };
 		04A4F139223B4791004E740D /* SHUrgentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SHUrgentViewController.swift; sourceTree = "<group>"; };
 		04A4F13B223B59A9004E740D /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		04A4F140223B841E004E740D /* UIButton+init.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+init.m"; sourceTree = "<group>"; };
@@ -132,6 +132,8 @@
 		04BFCA46223B36FB0039461D /* NurseCallUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NurseCallUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		04BFCA4A223B36FB0039461D /* NurseCallUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NurseCallUITests.swift; sourceTree = "<group>"; };
 		04BFCA4C223B36FB0039461D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		04D6D5BF224DF20A000BF0F4 /* SHSickRoomViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SHSickRoomViewController.swift; sourceTree = "<group>"; };
+		04D6D5C0224DF20A000BF0F4 /* SHSickRoomViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SHSickRoomViewController.xib; sourceTree = "<group>"; };
 		21B438401F17820EBE3CD26A /* Pods-NurseCall.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NurseCall.release.xcconfig"; path = "Target Support Files/Pods-NurseCall/Pods-NurseCall.release.xcconfig"; sourceTree = "<group>"; };
 		2EC9BB3D8DE42F0F4C5449F5 /* Pods_NurseCall.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NurseCall.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		67FAE40B9B7C04FAA7AF3944 /* Pods-NurseCall.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NurseCall.debug.xcconfig"; path = "Target Support Files/Pods-NurseCall/Pods-NurseCall.debug.xcconfig"; sourceTree = "<group>"; };
@@ -420,7 +422,8 @@
 		04A4F12B223B4747004E740D /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				04A4F137223B4783004E740D /* SHSickRoomViewController.swift */,
+				04D6D5BF224DF20A000BF0F4 /* SHSickRoomViewController.swift */,
+				04D6D5C0224DF20A000BF0F4 /* SHSickRoomViewController.xib */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -652,6 +655,7 @@
 				04BFCA35223B36FA0039461D /* LaunchScreen.storyboard in Resources */,
 				04BFCA32223B36FA0039461D /* Assets.xcassets in Resources */,
 				0428CD57223F87B5008378A3 /* SHDeviceManagerCell.xib in Resources */,
+				04D6D5C2224DF20A000BF0F4 /* SHSickRoomViewController.xib in Resources */,
 				0428CD4B223F86FA008378A3 /* SHSettingViewController.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -734,7 +738,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				04A4F138223B4783004E740D /* SHSickRoomViewController.swift in Sources */,
 				04A4F13C223B59A9004E740D /* Colors.swift in Sources */,
 				04A4F0F4223B3E2D004E740D /* SHSQLiteManager.swift in Sources */,
 				04265F5922438E8200A56EDE /* SHTAlertView.swift in Sources */,
@@ -753,6 +756,7 @@
 				04A4F0FB223B3E2D004E740D /* SHSocketTools + crc.swift in Sources */,
 				04265F4722436F3C00A56EDE /* SHCallDeviceSettingViewController.swift in Sources */,
 				0428CCD8223F4B62008378A3 /* SHServiceType.swift in Sources */,
+				04D6D5C1224DF20A000BF0F4 /* SHSickRoomViewController.swift in Sources */,
 				04A4F0F7223B3E2D004E740D /* SHSocketTools + send.swift in Sources */,
 				04A4F100223B3E63004E740D /* PrintLog.swift in Sources */,
 				0428CD59223F89B7008378A3 /* SHDevice.swift in Sources */,

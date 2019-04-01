@@ -46,13 +46,16 @@ class SHCallDeviceSettingViewController: SHViewController {
         
         let device = SHDevice()
         device.deviceType = self.deviceType
-        devices.append(device)
-        
         device.id = SHSQLiteManager.shared.insertCallDevice(device)
         
         
         // 添加到数据库中
         if device.id != 0 {
+            
+            self.devices =
+                SHSQLiteManager.shared.getCallDevices(
+                    deviceType: self.deviceType
+            )
          
             listView.reloadData()
             
@@ -113,10 +116,10 @@ extension SHCallDeviceSettingViewController: UICollectionViewDataSource {
         cell.device = devices[indexPath.item]
         
         cell.callBack = {
-            
-            print("执行回调")
-            self.devices = SHSQLiteManager.shared.getCallDevices(
-                deviceType: self.deviceType
+        
+            self.devices =
+                SHSQLiteManager.shared.getCallDevices(
+                    deviceType: self.deviceType
             )
             
             self.listView.reloadData()
@@ -161,8 +164,7 @@ extension SHCallDeviceSettingViewController {
             (listView.bounds.width - CGFloat(totalCols) * itemMarign) / CGFloat(totalCols
         )
         
-        print("editDevice = \(editDevice)")
-        let itemHeight = 7 * tabBarHeight -
+        let itemHeight = SHDeviceManagerCell.itemHeight -
             (editDevice ? 0 : tabBarHeight)
         
         let flowLayout =
