@@ -20,10 +20,10 @@
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7dY-0c-uEP">
-                        <rect key="frame" x="10" y="10" width="357" height="354"/>
+                        <rect key="frame" x="0.0" y="0.0" width="377" height="374"/>
                         <subviews>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="1 ~ 255" minimumFontSize="16" translatesAutoresizingMaskIntoConstraints="NO" id="Ojd-tI-iTY">
-                                <rect key="frame" x="53.5" y="94" width="250" height="40"/>
+                                <rect key="frame" x="56.5" y="94" width="264" height="40"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="DqM-J4-hpN"/>
@@ -36,7 +36,7 @@
                                 </connections>
                             </textField>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oGL-14-i3h" userLabel="line1">
-                                <rect key="frame" x="53.5" y="135" width="250" height="1"/>
+                                <rect key="frame" x="56.5" y="135" width="264" height="1"/>
                                 <color key="backgroundColor" red="0.79607843140000001" green="0.79607843140000001" blue="0.79607843140000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="1" id="n3I-nE-j4X"/>
@@ -44,7 +44,7 @@
                                 <viewLayoutGuide key="safeArea" id="g3K-76-oDp"/>
                             </view>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="1 ~ 255" minimumFontSize="16" translatesAutoresizingMaskIntoConstraints="NO" id="oHa-dv-Jsv">
-                                <rect key="frame" x="53.5" y="151" width="250" height="40"/>
+                                <rect key="frame" x="56.5" y="151" width="264" height="40"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
@@ -54,7 +54,7 @@
                                 </connections>
                             </textField>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wRT-CO-lvb" userLabel="line2">
-                                <rect key="frame" x="53.5" y="192" width="250" height="1"/>
+                                <rect key="frame" x="56.5" y="192" width="264" height="1"/>
                                 <color key="backgroundColor" red="0.79607843140000001" green="0.79607843140000001" blue="0.79607843140000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="1" id="JVB-lW-zmf"/>
@@ -62,7 +62,7 @@
                                 <viewLayoutGuide key="safeArea" id="4jq-83-fDo"/>
                             </view>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="callDevice_setting" translatesAutoresizingMaskIntoConstraints="NO" id="OI5-db-igq">
-                                <rect key="frame" x="119" y="15" width="119" height="64"/>
+                                <rect key="frame" x="125.5" y="15" width="126" height="64"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
@@ -70,7 +70,7 @@
                                 </constraints>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LmA-T3-VDg">
-                                <rect key="frame" x="315" y="10" width="32" height="32"/>
+                                <rect key="frame" x="335" y="10" width="32" height="32"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="32" id="dRA-LM-2DO"/>
@@ -84,7 +84,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VfV-vq-O4b">
-                                <rect key="frame" x="53.5" y="263" width="250" height="40"/>
+                                <rect key="frame" x="56.5" y="263" width="264" height="40"/>
                                 <color key="backgroundColor" red="0.19215686269999999" green="0.59607843140000005" blue="0.94901960780000005" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="16"/>
                                 <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -100,7 +100,7 @@
                                 </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="character" minimumFontSize="16" translatesAutoresizingMaskIntoConstraints="NO" id="FI5-Rn-T5I">
-                                <rect key="frame" x="53.5" y="208" width="250" height="40"/>
+                                <rect key="frame" x="56.5" y="208" width="264" height="40"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
@@ -110,7 +110,7 @@
                                 </connections>
                             </textField>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Cn0-SU-vsX" userLabel="line3">
-                                <rect key="frame" x="53.5" y="249" width="250" height="1"/>
+                                <rect key="frame" x="56.5" y="249" width="264" height="1"/>
                                 <color key="backgroundColor" red="0.79607843140000001" green="0.79607843140000001" blue="0.79607843140000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="1" id="xjo-TE-xny"/>
@@ -159,11 +159,12 @@
                     </view>
                 </subviews>
             </view>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
-                <constraint firstAttribute="trailing" secondItem="7dY-0c-uEP" secondAttribute="trailing" constant="10" id="Lg9-e8-2sp"/>
-                <constraint firstItem="7dY-0c-uEP" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="10" id="b7X-80-45t"/>
-                <constraint firstItem="7dY-0c-uEP" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="10" id="k2a-4v-WXq"/>
-                <constraint firstAttribute="bottom" secondItem="7dY-0c-uEP" secondAttribute="bottom" constant="10" id="qpu-jh-VcC"/>
+                <constraint firstAttribute="trailing" secondItem="7dY-0c-uEP" secondAttribute="trailing" id="Lg9-e8-2sp"/>
+                <constraint firstItem="7dY-0c-uEP" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="b7X-80-45t"/>
+                <constraint firstItem="7dY-0c-uEP" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="k2a-4v-WXq"/>
+                <constraint firstAttribute="bottom" secondItem="7dY-0c-uEP" secondAttribute="bottom" id="qpu-jh-VcC"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
             <size key="customSize" width="377" height="374"/>

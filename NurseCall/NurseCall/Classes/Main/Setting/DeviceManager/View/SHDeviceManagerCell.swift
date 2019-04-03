@@ -76,6 +76,9 @@ class SHDeviceManagerCell: UICollectionViewCell {
         
         isUserInteractionEnabled = false
         
+        layer.cornerRadius = statusBarHeight * 0.5
+        clipsToBounds = true
+        
         // 初始化
         subNetIDTextField.leftViewMode = .always
         subNetIDTextField.leftView?.contentMode = .scaleAspectFit

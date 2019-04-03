@@ -14,6 +14,8 @@ private let deviceSettingCellReuseIdentifier =
 
 class SHCallDeviceSettingViewController: SHViewController {
     
+    
+    
     init(deviceType: SHDeviceManagerType) {
         super.init(nibName: nil, bundle: nil)
         
@@ -150,9 +152,8 @@ extension SHCallDeviceSettingViewController {
                                 bundle: nil),
                           forCellWithReuseIdentifier: deviceSettingCellReuseIdentifier
         )
+         
     }
-    
-    
     
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
