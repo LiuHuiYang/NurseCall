@@ -66,7 +66,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tRu-UM-EiC">
-                                <rect key="frame" x="58" y="255" width="272" height="40"/>
+                                <rect key="frame" x="58" y="260" width="272" height="40"/>
                                 <color key="backgroundColor" red="0.19215686269999999" green="0.59607843140000005" blue="0.94901960780000005" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="16"/>
                                 <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -111,7 +111,7 @@
                             <constraint firstItem="tRu-UM-EiC" firstAttribute="width" secondItem="iuP-AP-z0y" secondAttribute="width" id="EjA-KX-P4O"/>
                             <constraint firstItem="ELh-13-H5e" firstAttribute="centerX" secondItem="iuP-AP-z0y" secondAttribute="centerX" id="Fao-fm-3US"/>
                             <constraint firstItem="TEX-5g-Hk6" firstAttribute="top" secondItem="pRw-NS-k7p" secondAttribute="top" constant="10" id="Un1-yy-LHR"/>
-                            <constraint firstItem="tRu-UM-EiC" firstAttribute="top" secondItem="ELh-13-H5e" secondAttribute="bottom" constant="15" id="Uwn-8v-IM6"/>
+                            <constraint firstItem="tRu-UM-EiC" firstAttribute="top" secondItem="ELh-13-H5e" secondAttribute="bottom" constant="20" id="Uwn-8v-IM6"/>
                             <constraint firstItem="AUs-ec-vQM" firstAttribute="top" secondItem="pRw-NS-k7p" secondAttribute="top" id="V6h-Qv-AVF"/>
                             <constraint firstItem="ANC-xZ-GCL" firstAttribute="top" secondItem="ELh-13-H5e" secondAttribute="bottom" constant="1" id="VZc-by-cov"/>
                             <constraint firstItem="iuP-AP-z0y" firstAttribute="centerX" secondItem="pRw-NS-k7p" secondAttribute="centerX" id="WRo-XR-adh"/>

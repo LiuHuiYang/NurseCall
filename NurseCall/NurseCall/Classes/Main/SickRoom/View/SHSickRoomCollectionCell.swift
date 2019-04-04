@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SVProgressHUD
 
 class SHSickRoomCollectionCell: UICollectionViewCell {
     
@@ -46,7 +47,7 @@ class SHSickRoomCollectionCell: UICollectionViewCell {
     /// 默认高度
     static var itemHeight: CGFloat {
         
-        return 7 * tabBarHeight
+        return 5 * navigationBarHeight
     }
     
     /// 保存按钮
@@ -91,11 +92,11 @@ class SHSickRoomCollectionCell: UICollectionViewCell {
 //
 //        if SHSQLiteManager.shared.updateCallDevice(equipment) {
 //
-//            NotificationCenter.default.post(
-//                name: Notification.Name(editDeviceEndNotification),
-//                object: nil
-//            )
-//
+            NotificationCenter.default.post(
+                name: Notification.Name(editDeviceEndNotification),
+                object: nil
+            )
+
             // 执行闭包
             callBack?()
 //        }
@@ -109,15 +110,15 @@ class SHSickRoomCollectionCell: UICollectionViewCell {
 //        // 删除
 //        if SHSQLiteManager.shared.deleteCallDevice(device!) {
 //
-//            SVProgressHUD.showSuccess(
-//                withStatus: "Successful device deletion"
-//            )
-//
-//            NotificationCenter.default.post(
-//                name: Notification.Name(editDeviceEndNotification),
-//                object: nil
-//            )
-//
+            SVProgressHUD.showSuccess(
+                withStatus: "Successful device deletion"
+            )
+
+            NotificationCenter.default.post(
+                name: Notification.Name(editDeviceEndNotification),
+                object: nil
+            )
+
             // 执行闭包
             callBack?()
 //        }

@@ -181,10 +181,8 @@ extension SHSickRoomViewController {
             (listView.bounds.width - CGFloat(totalCols) * itemMarign) / CGFloat(totalCols
         )
         
-        let itemHeight = SHDeviceManagerCell.itemHeight -
+        let itemHeight = SHSickRoomCollectionCell.itemHeight -
             (editDevice ? 0 : tabBarHeight)
-        
-        print("行高: \(itemHeight)")
         
         let flowLayout =
             listView.collectionViewLayout as!
