@@ -8,23 +8,77 @@
 
 import UIKit
 
+/// cell重用标示符
+private let urgentCellReuseIdentifier =
+    "SHUrgentCollectionCell"
+
 class SHUrgentViewController: SHViewController {
+    
+    /// 列表
+    @IBOutlet weak var listView: UICollectionView!
+    
+}
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+// MARK: - UICollectionViewDataSource
+extension SHUrgentViewController: UICollectionViewDataSource {
+    
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        
+        return SHServiceTools.shared.services.count
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        
+        let cell =
+            collectionView.dequeueReusableCell(
+                withReuseIdentifier: urgentCellReuseIdentifier,
+                for: indexPath
+            ) as! SHUrgentCollectionCell
+        
+        cell.service = SHServiceTools.shared.services[indexPath.item];
+        
+        return cell
     }
-    */
+}
 
+
+// MARK: - UI初始化
+extension SHUrgentViewController {
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+          
+        listView.register(UINib(nibName:
+            urgentCellReuseIdentifier,
+                                bundle: nil),
+                          forCellWithReuseIdentifier: urgentCellReuseIdentifier
+        )
+    }
+    
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        
+        let itemMarign: CGFloat = statusBarHeight
+        let totalCols = 1
+        
+        let itemWidth =
+            (listView.bounds.width - CGFloat(totalCols) * itemMarign) / CGFloat(totalCols
+        )
+        
+        let itemHeight =
+            SHUrgentCollectionCell.itemHeight
+        
+        let flowLayout =
+            listView.collectionViewLayout as!
+        UICollectionViewFlowLayout
+        
+        flowLayout.minimumLineSpacing = itemMarign
+        flowLayout.minimumInteritemSpacing = itemMarign
+        
+        flowLayout.itemSize =
+            CGSize(width: itemWidth,
+                   height: itemHeight
+        )
+        
+    }
 }

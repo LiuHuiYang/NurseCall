@@ -70,7 +70,7 @@ class SHSettingViewController: UITableViewController {
     private func logout() {
         
         let alertView =
-            SHTAlertView.setupAlertView(
+            TYCustomAlertView.setupAlertView(
                 "Are you sure you want to log out?",
                 message: "",
                 isCustom: true

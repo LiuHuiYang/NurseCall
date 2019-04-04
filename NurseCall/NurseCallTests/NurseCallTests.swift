@@ -7,7 +7,7 @@
 //
 
 import XCTest
-@testable import NurseCall
+ 
 
 class NurseCallTests: XCTestCase {
 

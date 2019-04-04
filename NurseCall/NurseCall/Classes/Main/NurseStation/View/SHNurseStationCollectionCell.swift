@@ -9,10 +9,10 @@
 import UIKit
 import SVProgressHUD
 
-class SHSickRoomCollectionCell: UICollectionViewCell {
+class SHNurseStationCollectionCell: UICollectionViewCell {
     
     /// 病房
-    var sickRoom: SHSickRoom? {
+    var nurseStation: SHNurseStation? {
         
         didSet {
             
@@ -21,7 +21,7 @@ class SHSickRoomCollectionCell: UICollectionViewCell {
             roomTextField.text = nil
             nameTextField.text = nil
             
-            iconView.image = UIImage(named: "sickroom")
+            iconView.image = UIImage(named: "nursestation")
             
 //            iconView.image =
 //                device?.deviceType == .call ?
@@ -130,7 +130,7 @@ class SHSickRoomCollectionCell: UICollectionViewCell {
 }
 
 // MARK: - 编辑
-extension SHSickRoomCollectionCell {
+extension SHNurseStationCollectionCell {
     
     @objc private func startEditDevice() {
         
@@ -150,7 +150,7 @@ extension SHSickRoomCollectionCell {
     }
 }
 
-extension SHSickRoomCollectionCell {
+extension SHNurseStationCollectionCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()

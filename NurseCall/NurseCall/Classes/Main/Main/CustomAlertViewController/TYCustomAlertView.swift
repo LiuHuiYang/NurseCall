@@ -1,5 +1,5 @@
 //
-//  SHTAlertView.swift
+//  TYCustomAlertView.swift
 //  NurseCall
 //
 //  Created by Apple on 2019/3/21.
@@ -9,23 +9,23 @@
 import UIKit
 import TYAlertController
 
-class SHTAlertView: TYAlertView {
+class TYCustomAlertView: TYAlertView {
 
 }
 
-extension SHTAlertView {
+extension TYCustomAlertView {
     
-    static func setupAlertView(_ title: String, message: String, isCustom: Bool) -> SHTAlertView {
+    static func setupAlertView(_ title: String, message: String, isCustom: Bool) -> TYCustomAlertView {
         
         
         if isCustom == false {
             
-            return SHTAlertView(title: title, message: message)
+            return TYCustomAlertView(title: title, message: message)
         }
         
-        guard let customView = SHTAlertView(title: "", message: "") else {
+        guard let customView = TYCustomAlertView(title: "", message: "") else {
             
-            return SHTAlertView(title: title, message: message)
+            return TYCustomAlertView(title: title, message: message)
         }
         
         customView.layer.cornerRadius =

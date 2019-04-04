@@ -10,4 +10,3 @@ CREATE TABLE IF NOT EXISTS CALLDEVICES (
     remark   TEXT NOT NULL DEFAULT 'call device'
 );
 
-

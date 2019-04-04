@@ -13,7 +13,33 @@ class SHServiceTools: NSObject {
     /// 单例处理工具
     static let shared = SHServiceTools()
     
-    /// 解决广播数所
+    /// 所有的服务 == 这里应用使用cache
+    lazy var services: [SHService] = {
+        
+        var tests = [SHService]()
+        
+        // 测试代码
+        for i in 1 ... 8 {
+            
+            let service = SHService()
+            service.serviceType =
+                SHServiceType(rawValue: UInt8(i)) ?? .none
+            
+            if i & 1 == 0 {
+                
+                service.serviceLevel = .emergency
+            }
+            
+            tests.append(service)
+        }
+        
+        return tests
+    }()
+}
+
+extension SHServiceTools {
+    
+    /// 解析广播数据
     ///
     /// - Parameter scoketData: 广播数据
     static func receivingBroadcastData(_ socketData: SHSocketData) {
@@ -39,6 +65,7 @@ class SHServiceTools: NSObject {
         }
         
         print(status)
+        // FIXME: - 缓存的处理
         
         // 处理不同的服务类型
         switch serviceType {
@@ -102,6 +129,105 @@ class SHServiceTools: NSObject {
             
         default:
             break
+        }
+    }
+}
+
+// MARK: -
+extension SHServiceTools {
+    
+    
+    /// 服务状态的文字描述
+    ///
+    /// - Parameter status: 状态
+    /// - Returns: 文字描述
+    static func serviceStatus(_ status: SHServiceStatus) -> String {
+        
+        switch status {
+        case .on:
+            return "Serving"
+            
+        case .new:
+            return "New"
+            
+        case .acknowledge:
+            return "Pending"
+            
+        case .end:
+            return "End"
+            
+//        default:
+//            return ""
+        }
+    }
+    
+    /// 获得呼叫名称
+    ///
+    /// - Parameter serviceType: 呼叫类型
+    /// - Returns: 文字描述
+    static func serviceName(_ serviceType: SHServiceType) -> String {
+        
+        switch serviceType {
+            
+        case .none:
+            return ""
+        
+        case .generalService:
+            return "General"
+        
+        case .superEmergencyService:
+            return "Doctor" // 将超紧急服务修改为叫医生
+            
+        case .nurseService:
+            return "Nurse"
+       
+        case .pendService:
+            return "Peinding"
+            
+        case .emergencyService: // 紧急服务
+            return "Emergency"
+        
+        case .inService:
+            return "Serving"
+       
+        case .thirstyService:
+            return "Thirsty"
+       
+        case .sheetsService:
+            return "Sheets"
+        
+        case .nurseBabyService:
+            return "Nurse Baby"
+        
+        case .feelPainService:
+            return "Pain"
+        
+        case .doctorService:
+            return "Doctor"
+        
+        case .hungryService:
+            return "Hungry"
+       
+        case .dressService:
+            return "Dress"
+        
+        case .walkHelpService:
+            return "Walk Help"
+       
+        case .feelHotService:
+            return "Hot"
+        
+        case .guestSRVService:
+            return "Guest SRV"
+        
+        case .toiletHelpService:
+            return "Toilet Help"
+        
+        case .wheelchairService:
+            return "Wheel Chair"
+        
+        case .feelColdService:
+            return "Cold"
         }
     }
 }

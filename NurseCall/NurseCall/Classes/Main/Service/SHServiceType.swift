@@ -8,8 +8,15 @@
 
 import Foundation
 
-// 服务类型
 
+/// 呼叫级别
+enum SHServiceLevel: UInt8 {
+    
+    case normal     // 普通呼叫
+    case emergency // 紧急呼叫
+}
+
+// 服务类型
 enum SHServiceType : UInt8 {
     
     case none                   // 没有服务
