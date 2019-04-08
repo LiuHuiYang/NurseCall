@@ -31,6 +31,7 @@ class SHUrgentCollectionCell: UICollectionViewCell {
             
             levelLabel.text = isNormalLevel ? "LOW" : "HIGH"
             
+//            timeLabel.text = "\(service?.currentTime ?? "")"
         }
     }
     

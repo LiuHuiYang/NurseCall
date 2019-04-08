@@ -30,6 +30,8 @@ class SHService: NSObject {
         }
     }
     
+    /// 服务发生时间
+    var currentTime = Date.localTime()
     
     // 找到呼叫设备与响应设备
     

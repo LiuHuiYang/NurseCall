@@ -23,6 +23,7 @@
 		044567D222545605001B47EE /* SHSickRoomCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044567D022545605001B47EE /* SHSickRoomCollectionCell.swift */; };
 		044567D322545605001B47EE /* SHSickRoomCollectionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 044567D122545605001B47EE /* SHSickRoomCollectionCell.xib */; };
 		044567D6225458B5001B47EE /* SHSickRoom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044567D5225458B5001B47EE /* SHSickRoom.swift */; };
+		044B294E225AE53B007D81B4 /* Date + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044B294D225AE53B007D81B4 /* Date + Extension.swift */; };
 		04A4F0F4223B3E2D004E740D /* SHSQLiteManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A4F0E8223B3E2D004E740D /* SHSQLiteManager.swift */; };
 		04A4F0F5223B3E2D004E740D /* Common.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A4F0EB223B3E2D004E740D /* Common.swift */; };
 		04A4F0F6223B3E2D004E740D /* SHSocketTools + cache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A4F0EE223B3E2D004E740D /* SHSocketTools + cache.swift */; };
@@ -103,6 +104,7 @@
 		044567D022545605001B47EE /* SHSickRoomCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SHSickRoomCollectionCell.swift; sourceTree = "<group>"; };
 		044567D122545605001B47EE /* SHSickRoomCollectionCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SHSickRoomCollectionCell.xib; sourceTree = "<group>"; };
 		044567D5225458B5001B47EE /* SHSickRoom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SHSickRoom.swift; sourceTree = "<group>"; };
+		044B294D225AE53B007D81B4 /* Date + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date + Extension.swift"; sourceTree = "<group>"; };
 		04A4F0E8223B3E2D004E740D /* SHSQLiteManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SHSQLiteManager.swift; sourceTree = "<group>"; };
 		04A4F0EB223B3E2D004E740D /* Common.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Common.swift; sourceTree = "<group>"; };
 		04A4F0EE223B3E2D004E740D /* SHSocketTools + cache.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SHSocketTools + cache.swift"; sourceTree = "<group>"; };
@@ -342,6 +344,7 @@
 				04A4F0FD223B3E63004E740D /* Bundle + Extension.swift */,
 				04A4F0FC223B3E63004E740D /* PrintLog.swift */,
 				04A4F0FE223B3E63004E740D /* UIColor + Extension.swift */,
+				044B294D225AE53B007D81B4 /* Date + Extension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -863,6 +866,7 @@
 				04A4F0FB223B3E2D004E740D /* SHSocketTools + crc.swift in Sources */,
 				04265F4722436F3C00A56EDE /* SHCallDeviceSettingViewController.swift in Sources */,
 				0428CCD8223F4B62008378A3 /* SHServiceType.swift in Sources */,
+				044B294E225AE53B007D81B4 /* Date + Extension.swift in Sources */,
 				04D1F6C92255FB55001308C5 /* SHServiceTools + CaChe.swift in Sources */,
 				04D6D5C1224DF20A000BF0F4 /* SHSickRoomViewController.swift in Sources */,
 				04A4F0F7223B3E2D004E740D /* SHSocketTools + send.swift in Sources */,

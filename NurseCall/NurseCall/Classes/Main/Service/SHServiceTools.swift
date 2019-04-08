@@ -30,7 +30,8 @@ class SHServiceTools: NSObject {
                 service.serviceLevel = .emergency
             }
             
-            tests.append(service)
+            // 后来者居上
+            tests.insert(service, at: 0)
         }
         
         return tests

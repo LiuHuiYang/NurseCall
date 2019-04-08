@@ -38,6 +38,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             UIFont.preferredFont(forTextStyle: .title3)
         )
         
+        Date.localTime()
+          
         return true
     }
 
