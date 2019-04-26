@@ -12,16 +12,11 @@ import SVProgressHUD
 class SHServiceTools: NSObject {
     
     /// 单例处理工具
-    static let shared = SHServiceTools()
+    static var shared = SHServiceTools()
     
-    /// 服务缓存
-    static let caches = NSCache<AnyObject, AnyObject>()
+    /// 服务的缓存缓存
+    static var caches = [SHService]()
     
-    /// 服务总数
-    static var count: Int {
-        
-        return SHServiceTools.shared.services.count
-    }
     
     /// 所有的服务 == 这里应用使用cache
     lazy var services: [SHService] = {
@@ -90,7 +85,7 @@ extension SHServiceTools {
             receivedService.serviceCallTime = Date.localTime()
             
             // 保存在缓存中
-            SHServiceTools.createOrUpdateService(
+            SHServiceTools.createService(
                 receivedService
             )
             
@@ -109,7 +104,7 @@ extension SHServiceTools {
                 service.status = status
                 service.serviceAcknowledgeTime = Date.localTime()
                 
-                SHServiceTools.createOrUpdateService(
+                SHServiceTools.updateService(
                     service
                 )
                 
@@ -129,7 +124,7 @@ extension SHServiceTools {
                 service.status = status
                 service.serviceStartTime = Date.localTime()
                 
-                SHServiceTools.createOrUpdateService(
+                SHServiceTools.updateService(
                     service
                 )
                 
@@ -149,7 +144,7 @@ extension SHServiceTools {
                 service.status = status
                 service.serviceFinishedTime = Date.localTime()
                 
-                SHServiceTools.createOrUpdateService(
+                SHServiceTools.updateService(
                     service
                 )
                 

@@ -11,13 +11,41 @@ import Foundation
 // MARK: - 服务缓存的处理
 extension SHServiceTools {
     
-    /// 添加或者更新服务
+    /// 添加新服务
     ///
     /// - Parameter service: 服务
-    static func createOrUpdateService(_ service: SHService) {
+    static func createService(_ service: SHService) {
         
-        let cacheKey = cacheKeyForService(service)
-        SHServiceTools.caches.setObject(service, forKey: cacheKey)
+        caches.insert(service, at: 0)
+    }
+    
+    
+    /// 更新服务的信息
+    ///
+    /// - Parameter service: 服务
+    static func updateService(_ service: SHService) {
+        
+        for savedService in caches {
+            
+            if savedService.subNetID == service.subNetID &&
+                savedService.deviceID == service.deviceID &&
+                savedService.serviceType == service.serviceType {
+                
+                // 更新状态
+                savedService.status = service.status
+                
+                // 四个时间
+                savedService.serviceCallTime =
+                    service.serviceCallTime
+               
+                savedService.serviceAcknowledgeTime =
+                    service.serviceAcknowledgeTime
+                
+                savedService.serviceStartTime = service.serviceStartTime
+                
+                savedService.serviceFinishedTime = service.serviceFinishedTime
+            }
+        }
     }
     
     /// 删除已完成的服务
@@ -25,10 +53,21 @@ extension SHServiceTools {
     /// - Parameter service: 完成的服务
     static func removeService(_ service: SHService) {
         
-        let cacheKey = cacheKeyForService(service)
-        SHServiceTools.caches.removeObject(forKey: cacheKey)
+        let count = caches.count
+        
+        for index in 0 ..< count {
+            
+            let savedService = caches[index]
+            
+            if savedService.subNetID == service.subNetID &&
+                savedService.deviceID == service.deviceID &&
+                savedService.serviceType == service.serviceType {
+                
+                caches.remove(at: index)
+                break
+            }
+        }
     }
-    
     
     /// 查询缓存中的服务
     ///
@@ -36,22 +75,17 @@ extension SHServiceTools {
     /// - Returns: 存在服务, nil 不存在
     static func selectService(_ service: SHService) -> SHService? {
         
-        let cacheKey = cacheKeyForService(service)
-        return
-            SHServiceTools.caches.object(forKey: cacheKey)
-                as? SHService
+        for savedService in caches {
+            
+            if savedService.subNetID == service.subNetID &&
+                savedService.deviceID == service.deviceID &&
+                savedService.serviceType == service.serviceType {
+                
+                return savedService
+            }
+        }
+        
+        return nil
     }
     
-     
-    /// 生成服务在缓存中的key
-    ///
-    /// - Parameter service: 服务
-    /// - Returns: key
-    static func cacheKeyForService(_ service: SHService) -> AnyObject {
-        
-        // 缓存中的key
-        return ("\(service.subNetID)-\(service.deviceID)- " +
-                "\(service.serviceType.rawValue)")
-            as AnyObject
-    }
 }
