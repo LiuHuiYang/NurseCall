@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SVProgressHUD
 
 class SHServiceTools: NSObject {
     
@@ -15,6 +16,12 @@ class SHServiceTools: NSObject {
     
     /// 服务缓存
     static let caches = NSCache<AnyObject, AnyObject>()
+    
+    /// 服务总数
+    static var count: Int {
+        
+        return SHServiceTools.shared.services.count
+    }
     
     /// 所有的服务 == 这里应用使用cache
     lazy var services: [SHService] = {
@@ -87,6 +94,12 @@ extension SHServiceTools {
                 receivedService
             )
             
+            SVProgressHUD.showInfo(
+                withStatus:
+                    receivedService.serviceName + " ON"
+            )
+            
+            
         case .acknowledge:
             
             // 查询服务
@@ -98,6 +111,11 @@ extension SHServiceTools {
                 
                 SHServiceTools.createOrUpdateService(
                     service
+                )
+                
+                SVProgressHUD.showInfo(
+                    withStatus:
+                    receivedService.serviceName + " Call"
                 )
             }
             
@@ -113,6 +131,11 @@ extension SHServiceTools {
                 
                 SHServiceTools.createOrUpdateService(
                     service
+                )
+                
+                SVProgressHUD.showInfo(
+                    withStatus:
+                    receivedService.serviceName + " On"
                 )
             }
             
@@ -134,6 +157,12 @@ extension SHServiceTools {
                 SHServiceTools.removeService(service)
                 
                 // 存入数据库
+                
+                
+                SVProgressHUD.showInfo(
+                    withStatus:
+                    receivedService.serviceName + " Off"
+                )
             }
         }
         
