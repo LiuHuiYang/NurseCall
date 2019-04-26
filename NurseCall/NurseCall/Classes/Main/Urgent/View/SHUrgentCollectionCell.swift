@@ -21,17 +21,42 @@ class SHUrgentCollectionCell: UICollectionViewCell {
         
         didSet {
             
-            nameLabel.text = service?.serviceName
+            guard let server = service else {
+                return
+            }
+            
+            nameLabel.text = server.serviceName
             
             let isNormalLevel =
-                service?.serviceLevel == SHServiceLevel.normal
+                server.serviceLevel == SHServiceLevel.normal
             
             levelIconView.backgroundColor =
                 isNormalLevel ? generalColor : emergencyeColor
             
             levelLabel.text = isNormalLevel ? "LOW" : "HIGH"
+             
+            // 只显示当前状态的时间
+            var showDate = Date()
             
-//            timeLabel.text = "\(service?.currentTime ?? "")"
+            switch server.status {
+
+            case .new:
+                showDate = server.serviceCallTime
+
+            case .acknowledge:
+                showDate = server.serviceAcknowledgeTime
+
+            case .on:
+                showDate = server.serviceStartTime
+
+            case .end:
+                showDate = server.serviceFinishedTime
+            }
+            
+            timeLabel.text =
+                Date.dateToString(showDate,
+                                  formatter: "HH:mm:ss dd/MM/yyyy"
+            )
         }
     }
     
@@ -73,7 +98,6 @@ class SHUrgentCollectionCell: UICollectionViewCell {
 }
 
 extension SHUrgentCollectionCell {
-    
     
     /// 长按处理响应
     ///

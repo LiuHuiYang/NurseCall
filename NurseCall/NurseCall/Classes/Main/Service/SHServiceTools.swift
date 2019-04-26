@@ -17,11 +17,8 @@ class SHServiceTools: NSObject {
     /// 服务的缓存缓存
     static var caches = [SHService]()
     
-    
     /// 所有的服务 == 这里应用使用cache
     lazy var services: [SHService] = {
-        
-        var tests = [SHService]()
         
         // 测试代码
         for i in 1 ... 8 {
@@ -36,10 +33,10 @@ class SHServiceTools: NSObject {
             }
             
             // 后来者居上
-            tests.insert(service, at: 0)
+            SHServiceTools.createService(service)
         }
         
-        return tests
+        return SHServiceTools.caches
     }()
 }
 
@@ -82,7 +79,7 @@ extension SHServiceTools {
         case .new:
   
             receivedService.status = status
-            receivedService.serviceCallTime = Date.localTime()
+            receivedService.serviceCallTime = Date()
             
             // 保存在缓存中
             SHServiceTools.createService(
@@ -102,7 +99,7 @@ extension SHServiceTools {
                 
                 // 更新值
                 service.status = status
-                service.serviceAcknowledgeTime = Date.localTime()
+                service.serviceAcknowledgeTime = Date()
                 
                 SHServiceTools.updateService(
                     service
@@ -122,7 +119,7 @@ extension SHServiceTools {
                 
                 // 更新值
                 service.status = status
-                service.serviceStartTime = Date.localTime()
+                service.serviceStartTime = Date()
                 
                 SHServiceTools.updateService(
                     service
@@ -142,7 +139,7 @@ extension SHServiceTools {
                 
                 // 更新值
                 service.status = status
-                service.serviceFinishedTime = Date.localTime()
+                service.serviceFinishedTime = Date()
                 
                 SHServiceTools.updateService(
                     service
@@ -160,73 +157,7 @@ extension SHServiceTools {
                 )
             }
         }
-        
-        // 处理不同的服务类型
-        switch serviceType {
-            
-        case .pendService:          // 护士站已有响应
-            break
-            
-        case .generalService:       // 一般服务
-            break
-            
-        case .inService:            // 护士在该病房中 服务中
-            break
-            
-        case .emergencyService:     // 紧急服务
-            break
-            
-        case .nurseService:         // 护理服务
-            break
-            
-        case .thirstyService:         // 帮助喝水的服务
-            break
-            
-        case .sheetsService:         // 整理床单服务
-            break
-            
-        case .nurseBabyService:       // 婴儿看护服务
-            break
-            
-        case .feelPainService:       // 感觉疼痛服务
-            break
-            
-        case .doctorService:          // 医生服务
-            break
-            
-        case .hungryService:          // 饥饿的服务
-            break
-            
-        case .dressService:          // 穿衣服务
-            break
-            
-        case .walkHelpService:        // 助行服务
-            break
-            
-        case .feelHotService:         // 感觉热的服务
-            break
-            
-        case .guestSRVService:        // SRV服务
-            break
-            
-        case .toiletHelpService:      // 卫生服务
-            break
-            
-        case .wheelchairService:      // 轮椅服务
-            break
-            
-        case .feelColdService:        // 保暖的服务
-            break
-            
-        case .superEmergencyService:  // 超紧急服务(设置为叫医生服务)
-            break
-            
-        default:
-            break
-        }
     }
-    
-    
 }
 
 // MARK: -

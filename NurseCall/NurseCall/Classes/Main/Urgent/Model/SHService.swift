@@ -48,16 +48,16 @@ class SHService: NSObject {
     }
     
     /// 服务呼叫时间
-    var serviceCallTime = Date.localTime()
+    var serviceCallTime = Date()
     
     /// 服务响应时间
-    var serviceAcknowledgeTime = Date.localTime()
+    var serviceAcknowledgeTime = Date()
     
     /// 服务开始时间
-    var serviceStartTime = Date.localTime()
+    var serviceStartTime = Date()
     
     /// 服务结束
-    var serviceFinishedTime = Date.localTime()
+    var serviceFinishedTime = Date()
     
     // 找到呼叫设备与响应设备
     
