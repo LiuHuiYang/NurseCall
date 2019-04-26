@@ -13,6 +13,9 @@ class SHServiceTools: NSObject {
     /// 单例处理工具
     static let shared = SHServiceTools()
     
+    /// 服务缓存
+    static let caches = NSCache<AnyObject, AnyObject>()
+    
     /// 所有的服务 == 这里应用使用cache
     lazy var services: [SHService] = {
         
@@ -45,13 +48,13 @@ extension SHServiceTools {
     /// - Parameter scoketData: 广播数据
     static func receivingBroadcastData(_ socketData: SHSocketData) {
         
-        // 不是呼叫服务不工作
+        // 不是呼叫服务不处理
         if socketData.operatorCode != 0x03B2 &&
            socketData.operatorCode != 0x03B3 {
             return
         }
         
-        print(socketData)
+        printLog(message: socketData)
         
         // 呼叫类型
         let callType = socketData.additionalData[0]
@@ -65,32 +68,73 @@ extension SHServiceTools {
                 return
         }
         
-        
-        
-        print(status)
-        // FIXME: - 缓存的处理
-        
-        let service = SHService()
-        service.subNetID = socketData.subNetID
-        service.deviceID = socketData.deviceID
-        service.serviceType = serviceType
-        service.status = status
+        // 创建新服务
+        let receivedService = SHService()
+        receivedService.subNetID = socketData.subNetID
+        receivedService.deviceID = socketData.deviceID
+        receivedService.serviceType = serviceType
         
         // 处理当前的响应时间
         switch status {
             
         case .new:
-            service.serviceCallTime = Date.localTime()
+  
+            receivedService.status = status
+            receivedService.serviceCallTime = Date.localTime()
+            
+            // 保存在缓存中
+            SHServiceTools.createOrUpdateService(
+                receivedService
+            )
             
         case .acknowledge:
-            service.serviceAcknowledgeTime = Date.localTime()
+            
+            // 查询服务
+            if let service = SHServiceTools.selectService(receivedService) {
+                
+                // 更新值
+                service.status = status
+                service.serviceAcknowledgeTime = Date.localTime()
+                
+                SHServiceTools.createOrUpdateService(
+                    service
+                )
+            }
+            
             
         case .on:
-            service.serviceStartTime = Date.localTime()
+            
+            // 查询服务
+            if let service = SHServiceTools.selectService(receivedService) {
+                
+                // 更新值
+                service.status = status
+                service.serviceStartTime = Date.localTime()
+                
+                SHServiceTools.createOrUpdateService(
+                    service
+                )
+            }
             
         case .end:
-            service.serviceFinishedTime = Date.localTime()
             
+            
+            // 查询服务
+            if let service = SHServiceTools.selectService(receivedService) {
+                
+                // 更新值
+                service.status = status
+                service.serviceFinishedTime = Date.localTime()
+                
+                SHServiceTools.createOrUpdateService(
+                    service
+                )
+                
+                // 从缓存中删除服务
+                SHServiceTools.removeService(service)
+                
+                // 存入数据库
+            }
         }
         
         // 处理不同的服务类型
@@ -157,6 +201,8 @@ extension SHServiceTools {
             break
         }
     }
+    
+    
 }
 
 // MARK: -

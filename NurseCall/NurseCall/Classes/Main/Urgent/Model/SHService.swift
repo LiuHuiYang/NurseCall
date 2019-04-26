@@ -33,6 +33,17 @@ class SHService: NSObject {
         didSet {
             
             serviceName = SHServiceTools.serviceName(serviceType)
+            
+            if serviceType == .emergencyService ||
+                serviceType == .superEmergencyService {
+                
+                serviceLevel = .emergency
+            
+            } else {
+            
+                serviceLevel = .normal
+                
+            }
         }
     }
     
