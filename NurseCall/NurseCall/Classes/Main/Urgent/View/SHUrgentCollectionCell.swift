@@ -81,7 +81,8 @@ extension SHUrgentCollectionCell {
     @objc private func longPressService(
         _ recognizer: UILongPressGestureRecognizer) {
         
-        if recognizer.state != .began {
+        guard let server = service,
+            recognizer.state == .began else {
             return
         }
         
@@ -98,23 +99,61 @@ extension SHUrgentCollectionCell {
         // 开启服务
         let startAction = TYAlertAction(title: "Start", style: .cancel) { (action) in
             
+            SHSocketTools.sendData(
+                operatorCode: 0x03B1,
+                subNetID: server.subNetID,
+                deviceID: server.deviceID,
+                additionalData:
+                    [
+                        server.serviceType.rawValue,
+                        SHServiceStatus.on.rawValue
+                ]
+            )
         }
         
         
         // 结束服务
         let finishAction = TYAlertAction(title: "Finished", style: .cancel) { (action) in
             
+            SHSocketTools.sendData(
+                operatorCode: 0x03B1,
+                subNetID: server.subNetID,
+                deviceID: server.deviceID,
+                additionalData:
+                    [
+                        server.serviceType.rawValue,
+                        SHServiceStatus.end.rawValue
+                ]
+            )
         }
         
         
         // 响应服务
         let acknowledgeAction = TYAlertAction(title: "Acknowledge", style: .default) { (action) in
             
+            SHSocketTools.sendData(
+                operatorCode: 0x03B1,
+                subNetID: server.subNetID,
+                deviceID: server.deviceID,
+                additionalData:
+                [   server.serviceType.rawValue,
+                    SHServiceStatus.acknowledge.rawValue
+                ]
+            )
         }
         
         // 紧急服务
         let codeBlueAction = TYAlertAction(title: "Code Blue", style: .destructive) { (action) in
             
+            SHSocketTools.sendData(
+                operatorCode: 0x03B1,
+                subNetID: server.subNetID,
+                deviceID: server.deviceID,
+                additionalData:
+                    [   server.serviceType.rawValue,
+                        SHServiceStatus.on.rawValue
+                ]
+            )
         }
         
         alertView.add(startAction)

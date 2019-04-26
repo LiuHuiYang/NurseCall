@@ -45,9 +45,9 @@ extension SHServiceTools {
     /// - Parameter scoketData: 广播数据
     static func receivingBroadcastData(_ socketData: SHSocketData) {
         
-        // 不是呼叫报务不工作
+        // 不是呼叫服务不工作
         if socketData.operatorCode != 0x03B2 &&
-            socketData.operatorCode != 0x03B3 {
+           socketData.operatorCode != 0x03B3 {
             return
         }
         
@@ -65,8 +65,33 @@ extension SHServiceTools {
                 return
         }
         
+        
+        
         print(status)
         // FIXME: - 缓存的处理
+        
+        let service = SHService()
+        service.subNetID = socketData.subNetID
+        service.deviceID = socketData.deviceID
+        service.serviceType = serviceType
+        service.status = status
+        
+        // 处理当前的响应时间
+        switch status {
+            
+        case .new:
+            service.serviceCallTime = Date.localTime()
+            
+        case .acknowledge:
+            service.serviceAcknowledgeTime = Date.localTime()
+            
+        case .on:
+            service.serviceStartTime = Date.localTime()
+            
+        case .end:
+            service.serviceFinishedTime = Date.localTime()
+            
+        }
         
         // 处理不同的服务类型
         switch serviceType {
@@ -137,7 +162,6 @@ extension SHServiceTools {
 // MARK: -
 extension SHServiceTools {
     
-    
     /// 服务状态的文字描述
     ///
     /// - Parameter status: 状态
@@ -145,6 +169,7 @@ extension SHServiceTools {
     static func serviceStatus(_ status: SHServiceStatus) -> String {
         
         switch status {
+            
         case .on:
             return "Serving"
             

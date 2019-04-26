@@ -38,7 +38,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             UIFont.preferredFont(forTextStyle: .title3)
         )
         
-        Date.localTime()
+//        printLog(message: "当前时间: \(Date.dateToString(formatter: "yyyy-MM-dd  HH:mm:ss"))")
+//
+        let date = Date.stringToDate("10:36:01", formatter: "hh:mm:ss")
+        
+        printLog(message: "当前时间: \(date)")
+        
+        printLog(message: "日期 \(Date.dateToString(Date.localTime(), formatter: "dd/MM/yyyy"))")
           
         return true
     }
