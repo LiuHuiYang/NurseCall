@@ -111,7 +111,6 @@ extension SHServiceTools {
                 )
             }
             
-            
         case .on:
             
             // 查询服务
@@ -149,8 +148,6 @@ extension SHServiceTools {
                 SHServiceTools.removeService(service)
                 
                 // 存入数据库
-                
-                
                 SVProgressHUD.showInfo(
                     withStatus:
                     receivedService.serviceName + " Off"

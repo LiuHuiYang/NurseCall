@@ -38,18 +38,26 @@ class SHSettingViewController: UITableViewController {
         switch indexPath.section {
             
         case 0:
-            let callController = SHCallDeviceSettingViewController(deviceType: .call)
+            
+            SHDeviceSettingViewController.showDeviceType = .call
+            
+            let callController = SHDeviceSettingViewController()
+            
             navigationController?.pushViewController(
                 callController,
                 animated: true
             )
             
         case 1:
-            let callController = SHCallDeviceSettingViewController(deviceType: .response)
+            
+            SHDeviceSettingViewController.showDeviceType = .response
+            
+            let callController = SHDeviceSettingViewController()
+            
             navigationController?.pushViewController(
                 callController,
                 animated: true
-            ) 
+            )
             
         case 2:
             logout()

@@ -9,6 +9,10 @@
 import UIKit
 import SVProgressHUD
 
+/// 设置配置重用标示符
+let deviceSettingCellReuseIdentifier =
+    "SHDeviceManagerCell"
+
 class SHDeviceManagerCell: UICollectionViewCell {
     
     /// 呼叫设备
@@ -151,7 +155,7 @@ class SHDeviceManagerCell: UICollectionViewCell {
         equipment.deviceID = deviceID
         equipment.remark = remark
         
-        if SHSQLiteManager.shared.updateCallDevice(equipment) {
+        if SHSQLiteManager.shared.updateDevice(equipment) {
             
             NotificationCenter.default.post(
                 name: Notification.Name(editDeviceEndNotification),
@@ -167,9 +171,9 @@ class SHDeviceManagerCell: UICollectionViewCell {
     
     /// 关闭按钮点击
     @IBAction func closeButtonClick() {
-        
+          
         // 删除
-        if SHSQLiteManager.shared.deleteCallDevice(device!) {
+        if SHSQLiteManager.shared.deleteDevices(device!) {
             
             SVProgressHUD.showSuccess(
                 withStatus: "Successful device deletion"

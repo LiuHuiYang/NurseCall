@@ -1,5 +1,5 @@
 //
-//  SHDevice.swift
+//  SHCallDevice.swift
 //  NurseCall
 //
 //  Created by Apple on 2019/3/18.
@@ -8,21 +8,17 @@
 
 import UIKit
 
-// FIXME: - 这里有争议 - 以后再确定
-
-enum SHDeviceManagerType: UInt {
+@objc enum SHDeviceType: UInt {
     
-    case call       = 1001 // 呼叫设备
-    case response          // 响应设备
+    case call = 10001
+    case response
 }
 
 /// 设备 kvc 使用了 runtime 所以要加上 objcMembers
 @objcMembers class SHDevice: NSObject {
-    
+
     /// 自增ID
     var id: UInt = 0
-    
-    var deviceType: SHDeviceManagerType = .call
     
     /// 子网ID
     var subNetID: UInt8 = 0
@@ -33,15 +29,8 @@ enum SHDeviceManagerType: UInt {
     /// 标注说明
     var remark: String = ""
     
-    /// 楼层
-    var floor: UInt = 0
-    
-    /// 房间
-    var roomID: UInt = 0
-    
-    /// 床位号
-    var bedID: UInt = 0
-    
+    /// 设备类型
+    var deviceType: SHDeviceType = .call
     
     override init() {
         super.init()
@@ -54,23 +43,26 @@ enum SHDeviceManagerType: UInt {
     }
     
     override func setValue(_ value: Any?, forKey key: String) {
-//        print("设置: \(key) - \(value ?? "")")
+        //        print("设置: \(key) - \(value ?? "")")
+        
         super.setValue(value, forKey: key)
     }
     
     override func setValue(_ value: Any?, forUndefinedKey key: String) {
         
-//        if key == "ID" {
+        //        if key == "ID" {
         
-//          id = UInt(value as? String ?? "0") ?? 0
-//            id = value as? UInt ?? 0
-//        }
+        //          id = UInt(value as? String ?? "0") ?? 0
+        //            id = value as? UInt ?? 0
+        //        }
+         
         
         if key == "deviceType" {
+            
             deviceType =
-                SHDeviceManagerType(
-                    rawValue: value as? UInt ?? 0
-                ) ?? .call
+                SHDeviceType(
+                    rawValue: UInt(value as? String ?? "0") ?? 0
+            ) ?? .call
         }
     }
 }

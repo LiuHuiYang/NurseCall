@@ -8,21 +8,21 @@
 
 /* Begin PBXBuildFile section */
 		0424B2012240917A0040BD12 /* SHServiceTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0424B2002240917A0040BD12 /* SHServiceTools.swift */; };
-		04265F4722436F3C00A56EDE /* SHCallDeviceSettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04265F4522436F3C00A56EDE /* SHCallDeviceSettingViewController.swift */; };
-		04265F4822436F3C00A56EDE /* SHCallDeviceSettingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04265F4622436F3C00A56EDE /* SHCallDeviceSettingViewController.xib */; };
-		04265F4A224374C600A56EDE /* SHSQLiteManager + CallDevice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04265F49224374C600A56EDE /* SHSQLiteManager + CallDevice.swift */; };
+		04265F4722436F3C00A56EDE /* SHDeviceSettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04265F4522436F3C00A56EDE /* SHDeviceSettingViewController.swift */; };
+		04265F4822436F3C00A56EDE /* SHDeviceSettingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04265F4622436F3C00A56EDE /* SHDeviceSettingViewController.xib */; };
+		04265F4A224374C600A56EDE /* SHSQLiteManager + Device.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04265F49224374C600A56EDE /* SHSQLiteManager + Device.swift */; };
 		04265F5722438D6800A56EDE /* UIView+frame.m in Sources */ = {isa = PBXBuildFile; fileRef = 04265F5522438D6800A56EDE /* UIView+frame.m */; };
 		0428CCD8223F4B62008378A3 /* SHServiceType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0428CCD7223F4B62008378A3 /* SHServiceType.swift */; };
 		0428CD4A223F86FA008378A3 /* SHSettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0428CD48223F86FA008378A3 /* SHSettingViewController.swift */; };
 		0428CD4B223F86FA008378A3 /* SHSettingViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0428CD49223F86FA008378A3 /* SHSettingViewController.storyboard */; };
 		0428CD56223F87B5008378A3 /* SHDeviceManagerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0428CD54223F87B5008378A3 /* SHDeviceManagerCell.swift */; };
 		0428CD57223F87B5008378A3 /* SHDeviceManagerCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0428CD55223F87B5008378A3 /* SHDeviceManagerCell.xib */; };
-		0428CD59223F89B7008378A3 /* SHDevice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0428CD58223F89B7008378A3 /* SHDevice.swift */; };
 		0428CD60223F8CAA008378A3 /* SHAboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0428CD5E223F8CAA008378A3 /* SHAboutViewController.swift */; };
 		0428CD61223F8CAA008378A3 /* SHAboutViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0428CD5F223F8CAA008378A3 /* SHAboutViewController.xib */; };
 		044567D222545605001B47EE /* SHSickRoomCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044567D022545605001B47EE /* SHSickRoomCollectionCell.swift */; };
 		044567D322545605001B47EE /* SHSickRoomCollectionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 044567D122545605001B47EE /* SHSickRoomCollectionCell.xib */; };
 		044567D6225458B5001B47EE /* SHSickRoom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044567D5225458B5001B47EE /* SHSickRoom.swift */; };
+		044952082276DBF300144AA9 /* SHDevice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044952072276DBF300144AA9 /* SHDevice.swift */; };
 		044B294E225AE53B007D81B4 /* Date + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044B294D225AE53B007D81B4 /* Date + Extension.swift */; };
 		04A4F0F4223B3E2D004E740D /* SHSQLiteManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A4F0E8223B3E2D004E740D /* SHSQLiteManager.swift */; };
 		04A4F0F5223B3E2D004E740D /* Common.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A4F0EB223B3E2D004E740D /* Common.swift */; };
@@ -88,9 +88,9 @@
 
 /* Begin PBXFileReference section */
 		0424B2002240917A0040BD12 /* SHServiceTools.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SHServiceTools.swift; sourceTree = "<group>"; };
-		04265F4522436F3C00A56EDE /* SHCallDeviceSettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SHCallDeviceSettingViewController.swift; sourceTree = "<group>"; };
-		04265F4622436F3C00A56EDE /* SHCallDeviceSettingViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SHCallDeviceSettingViewController.xib; sourceTree = "<group>"; };
-		04265F49224374C600A56EDE /* SHSQLiteManager + CallDevice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SHSQLiteManager + CallDevice.swift"; sourceTree = "<group>"; };
+		04265F4522436F3C00A56EDE /* SHDeviceSettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SHDeviceSettingViewController.swift; sourceTree = "<group>"; };
+		04265F4622436F3C00A56EDE /* SHDeviceSettingViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SHDeviceSettingViewController.xib; sourceTree = "<group>"; };
+		04265F49224374C600A56EDE /* SHSQLiteManager + Device.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SHSQLiteManager + Device.swift"; sourceTree = "<group>"; };
 		04265F5522438D6800A56EDE /* UIView+frame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+frame.m"; sourceTree = "<group>"; };
 		04265F5622438D6800A56EDE /* UIView+frame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+frame.h"; sourceTree = "<group>"; };
 		0428CCD7223F4B62008378A3 /* SHServiceType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SHServiceType.swift; sourceTree = "<group>"; };
@@ -98,12 +98,12 @@
 		0428CD49223F86FA008378A3 /* SHSettingViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = SHSettingViewController.storyboard; sourceTree = "<group>"; };
 		0428CD54223F87B5008378A3 /* SHDeviceManagerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SHDeviceManagerCell.swift; sourceTree = "<group>"; };
 		0428CD55223F87B5008378A3 /* SHDeviceManagerCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SHDeviceManagerCell.xib; sourceTree = "<group>"; };
-		0428CD58223F89B7008378A3 /* SHDevice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SHDevice.swift; sourceTree = "<group>"; };
 		0428CD5E223F8CAA008378A3 /* SHAboutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SHAboutViewController.swift; sourceTree = "<group>"; };
 		0428CD5F223F8CAA008378A3 /* SHAboutViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SHAboutViewController.xib; sourceTree = "<group>"; };
 		044567D022545605001B47EE /* SHSickRoomCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SHSickRoomCollectionCell.swift; sourceTree = "<group>"; };
 		044567D122545605001B47EE /* SHSickRoomCollectionCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SHSickRoomCollectionCell.xib; sourceTree = "<group>"; };
 		044567D5225458B5001B47EE /* SHSickRoom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SHSickRoom.swift; sourceTree = "<group>"; };
+		044952072276DBF300144AA9 /* SHDevice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SHDevice.swift; sourceTree = "<group>"; };
 		044B294D225AE53B007D81B4 /* Date + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date + Extension.swift"; sourceTree = "<group>"; };
 		04A4F0E8223B3E2D004E740D /* SHSQLiteManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SHSQLiteManager.swift; sourceTree = "<group>"; };
 		04A4F0EB223B3E2D004E740D /* Common.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Common.swift; sourceTree = "<group>"; };
@@ -233,8 +233,8 @@
 		0428CD4D223F8714008378A3 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				04265F4522436F3C00A56EDE /* SHCallDeviceSettingViewController.swift */,
-				04265F4622436F3C00A56EDE /* SHCallDeviceSettingViewController.xib */,
+				04265F4522436F3C00A56EDE /* SHDeviceSettingViewController.swift */,
+				04265F4622436F3C00A56EDE /* SHDeviceSettingViewController.xib */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -242,7 +242,7 @@
 		0428CD4E223F8714008378A3 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				0428CD58223F89B7008378A3 /* SHDevice.swift */,
+				044952072276DBF300144AA9 /* SHDevice.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -322,7 +322,7 @@
 			children = (
 				04A4F104223B3EA0004E740D /* SQL.sql */,
 				04A4F0E8223B3E2D004E740D /* SHSQLiteManager.swift */,
-				04265F49224374C600A56EDE /* SHSQLiteManager + CallDevice.swift */,
+				04265F49224374C600A56EDE /* SHSQLiteManager + Device.swift */,
 			);
 			path = DataBase;
 			sourceTree = "<group>";
@@ -755,7 +755,7 @@
 				04D1F6C52255EC55001308C5 /* SHUrgentCollectionCell.xib in Resources */,
 				044567D322545605001B47EE /* SHSickRoomCollectionCell.xib in Resources */,
 				04A4F14B223B862C004E740D /* SHLoginViewController.xib in Resources */,
-				04265F4822436F3C00A56EDE /* SHCallDeviceSettingViewController.xib in Resources */,
+				04265F4822436F3C00A56EDE /* SHDeviceSettingViewController.xib in Resources */,
 				0428CD61223F8CAA008378A3 /* SHAboutViewController.xib in Resources */,
 				04BFCA35223B36FA0039461D /* LaunchScreen.storyboard in Resources */,
 				04BFCA32223B36FA0039461D /* Assets.xcassets in Resources */,
@@ -849,7 +849,7 @@
 				04A4F13C223B59A9004E740D /* Colors.swift in Sources */,
 				04A4F0F4223B3E2D004E740D /* SHSQLiteManager.swift in Sources */,
 				04A4F101223B3E63004E740D /* Bundle + Extension.swift in Sources */,
-				04265F4A224374C600A56EDE /* SHSQLiteManager + CallDevice.swift in Sources */,
+				04265F4A224374C600A56EDE /* SHSQLiteManager + Device.swift in Sources */,
 				04D1F6BD2255DEED001308C5 /* SHNurseStation.swift in Sources */,
 				0428CD4A223F86FA008378A3 /* SHSettingViewController.swift in Sources */,
 				04A4F131223B4748004E740D /* SHNavigationController.swift in Sources */,
@@ -864,20 +864,20 @@
 				04A4F130223B4748004E740D /* SHViewController.swift in Sources */,
 				0424B2012240917A0040BD12 /* SHServiceTools.swift in Sources */,
 				04A4F0FB223B3E2D004E740D /* SHSocketTools + crc.swift in Sources */,
-				04265F4722436F3C00A56EDE /* SHCallDeviceSettingViewController.swift in Sources */,
+				04265F4722436F3C00A56EDE /* SHDeviceSettingViewController.swift in Sources */,
 				0428CCD8223F4B62008378A3 /* SHServiceType.swift in Sources */,
 				044B294E225AE53B007D81B4 /* Date + Extension.swift in Sources */,
 				04D1F6C92255FB55001308C5 /* SHServiceTools + CaChe.swift in Sources */,
 				04D6D5C1224DF20A000BF0F4 /* SHSickRoomViewController.swift in Sources */,
 				04A4F0F7223B3E2D004E740D /* SHSocketTools + send.swift in Sources */,
 				04A4F100223B3E63004E740D /* PrintLog.swift in Sources */,
-				0428CD59223F89B7008378A3 /* SHDevice.swift in Sources */,
 				0428CD60223F8CAA008378A3 /* SHAboutViewController.swift in Sources */,
 				04D1F6BB2255DEBB001308C5 /* SHNurseStationViewController.swift in Sources */,
 				04A4F116223B4080004E740D /* FileTools.m in Sources */,
 				04A4F0FA223B3E2D004E740D /* SHSocketData.swift in Sources */,
 				04A4F132223B4748004E740D /* SHMainViewController.swift in Sources */,
 				0428CD56223F87B5008378A3 /* SHDeviceManagerCell.swift in Sources */,
+				044952082276DBF300144AA9 /* SHDevice.swift in Sources */,
 				04A4F0F6223B3E2D004E740D /* SHSocketTools + cache.swift in Sources */,
 				044567D6225458B5001B47EE /* SHSickRoom.swift in Sources */,
 				04A4F0F9223B3E2D004E740D /* SHSocketTools.swift in Sources */,

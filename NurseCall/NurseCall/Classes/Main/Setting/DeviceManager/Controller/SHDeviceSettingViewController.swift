@@ -1,5 +1,5 @@
 //
-//  SHCallDeviceSettingViewController.swift
+//  SHDeviceSettingViewController.swift
 //  NurseCall
 //
 //  Created by Apple on 2019/3/21.
@@ -8,57 +8,39 @@
 
 import UIKit
 
-/// 设置配置重用标示符
-private let deviceSettingCellReuseIdentifier =
-    "SHDeviceManagerCell"
-
-class SHCallDeviceSettingViewController: SHViewController {
+class SHDeviceSettingViewController: SHViewController {
     
+    /// 显示设备类型
+    static var showDeviceType: SHDeviceType = .response
     
-    
-    init(deviceType: SHDeviceManagerType) {
-        super.init(nibName: nil, bundle: nil)
-        
-        self.deviceType = deviceType
-        
-        self.devices =
-            SHSQLiteManager.shared.getCallDevices(
-                deviceType: deviceType
-        )
-    }
-    
-    required init?(coder aDecoder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
-    
-    @IBOutlet weak var listView: UICollectionView!
+    /// 所有的呼叫设备
+    private lazy var devices =
+        SHSQLiteManager.shared.getDevices(
+            deviceType:
+            SHDeviceSettingViewController.showDeviceType
+    )
     
     /// 编辑设备
     private var editDevice = false
-    
-    /// 设备管理类型
-    private var deviceType = SHDeviceManagerType.call
-    
-    /// 所有的呼叫设备
-    private lazy var devices = [SHDevice]()
-    
+   
+    @IBOutlet weak var listView: UICollectionView!
+      
    
     /// 添加设备点击
     @IBAction func addDeviceButtonClick() {
         
         let device = SHDevice()
-        device.deviceType = self.deviceType
-        device.id = SHSQLiteManager.shared.insertCallDevice(device)
+        device.deviceType = SHDeviceSettingViewController.showDeviceType
+        device.id = SHSQLiteManager.shared.insertDevice(device)
         
+        devices =
+            SHSQLiteManager.shared.getDevices(deviceType:
+                SHDeviceSettingViewController.showDeviceType
+        )
         
         // 添加到数据库中
         if device.id != 0 {
             
-            self.devices =
-                SHSQLiteManager.shared.getCallDevices(
-                    deviceType: self.deviceType
-            )
-         
             listView.reloadData()
             
             listView.scrollToItem(
@@ -68,7 +50,6 @@ class SHCallDeviceSettingViewController: SHViewController {
             )
         }
     }
-    
     
     /// 编辑点击
     @IBAction func editButtonClick() {
@@ -87,7 +68,6 @@ class SHCallDeviceSettingViewController: SHViewController {
                 object: nil
             )
             
-        
         } else {
         
             NotificationCenter.default.post(
@@ -100,7 +80,7 @@ class SHCallDeviceSettingViewController: SHViewController {
 
 
 // MARK: - UICollectionViewDataSource
-extension SHCallDeviceSettingViewController: UICollectionViewDataSource {
+extension SHDeviceSettingViewController: UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         
@@ -115,13 +95,17 @@ extension SHCallDeviceSettingViewController: UICollectionViewDataSource {
                 for: indexPath
             ) as! SHDeviceManagerCell
         
+        
+        let device = devices[indexPath.item]
+        
+        
         cell.device = devices[indexPath.item]
         
         cell.callBack = {
         
             self.devices =
-                SHSQLiteManager.shared.getCallDevices(
-                    deviceType: self.deviceType
+                SHSQLiteManager.shared.getDevices(deviceType:
+                    SHDeviceSettingViewController.showDeviceType
             )
             
             self.listView.reloadData()
@@ -137,15 +121,14 @@ extension SHCallDeviceSettingViewController: UICollectionViewDataSource {
 
 
 // MARK: - UI初始化
-extension SHCallDeviceSettingViewController {
+extension SHDeviceSettingViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         navigationItem.title =
-            deviceType == .call ?
-                "Call equipment" :
-                "Response equipment"
+            SHDeviceSettingViewController.showDeviceType == .call ? "Call Equipment" : "Response Equipment"
+        
         
         listView.register(UINib(nibName:
             deviceSettingCellReuseIdentifier,
